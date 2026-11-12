@@ -269,3 +269,21 @@ h2:after {
 .font-controls button:hover {
   background: #f0f7fa;
 }
+
+.projects-table li {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.9rem;
+  list-style: none;
+}
+
+.projects-table .project-name {
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .projects-table li {
+    grid-template-columns: 1fr;
+  }
+}
