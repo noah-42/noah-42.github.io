@@ -91,9 +91,9 @@ ul li {
 }
 
 #banner {
-  margin: auto;
   display: block;
-  max-height: 100px;
+  margin: 0 0 12px 0;
+  max-height: 70px;
 }
 
 #author-name {
@@ -149,14 +149,12 @@ ul li {
 
 @media (max-width: 500px) {
   .navbar {
-    text-align: center;
+    text-align: left;
     padding: 50px 0 0 0;
   }
 
   #banner {
-    float: none;
-    display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 0 12px 0;
   }
 
   #author-name {
