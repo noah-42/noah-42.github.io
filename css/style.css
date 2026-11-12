@@ -190,3 +190,11 @@ a.plain-link:hover {
   color: inherit;
   text-decoration: underline;
 }
+
+h2 {
+  margin-top: 3.5rem;
+}
+
+h2:first-of-type {
+  margin-top: 2rem;
+}
