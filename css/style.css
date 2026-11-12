@@ -287,3 +287,14 @@ h2:after {
     grid-template-columns: 1fr;
   }
 }
+
+.font-controls-row {
+  max-width: 700px;
+  margin: -30px auto 0 auto;
+  text-align: right;
+  padding: 0 1rem;
+}
+
+.font-controls {
+  display: inline-block;
+}

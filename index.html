@@ -22,30 +22,6 @@
           <li class="pull-left nav-list">
             <a target="_blank" rel="noopener" href="https://github.com/noah-42">GitHub</a>
           </li>
-
-          <li class="pull-left nav-list font-controls" aria-label="Text size">
-            <button id="font-minus" type="button" aria-label="Smaller text">&minus;</button>
-            <button id="font-plus" type="button" aria-label="Larger text">+</button>
-          </li>
-
-          <script>
-            (function () {
-              var base = 17;
-              var size = parseFloat(localStorage.getItem('font-size')) || base;
-              document.documentElement.style.fontSize = size + 'px';
-              window.addEventListener('DOMContentLoaded', function () {
-                var plus = document.getElementById('font-plus');
-                var minus = document.getElementById('font-minus');
-                function set(v) {
-                  size = Math.min(22, Math.max(13, v));
-                  document.documentElement.style.fontSize = size + 'px';
-                  localStorage.setItem('font-size', size);
-                }
-                plus.addEventListener('click', function () { set(size + 1); });
-                minus.addEventListener('click', function () { set(size - 1); });
-              });
-            })();
-          </script>
         </ul>
       </div>
       <div class="clear"></div>
@@ -59,7 +35,7 @@
           <li>Over 15+ years in digital marketing &amp; product in pharmaceutical, B2B, and entertainment verticals.</li>
         </ul>
 
-        <h2 id="projects">AI Projects (Beta)</h2>
+        <h2 id="projects">Coding Projects (Beta)</h2>
 
         <ul class="projects-table">
           <li><span class="project-name"><a class="plain-link" href="https://www.noah42.com/jobscout/" target="_blank" rel="noopener">Jobscout</a></span>
