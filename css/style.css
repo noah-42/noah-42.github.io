@@ -325,3 +325,7 @@ h2:after {
 .content h3 a:hover {
   color: #0A66C2;
 }
+
+.projects-table .project-name {
+  color: #444746;
+}
