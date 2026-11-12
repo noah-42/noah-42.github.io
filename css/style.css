@@ -301,7 +301,7 @@ h2:after {
 
 .skills-table li {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 184px 1fr;
   gap: 0.25rem 3rem;
   margin-bottom: 0.9rem;
   list-style: none;
