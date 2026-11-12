@@ -272,8 +272,8 @@ h2:after {
 
 .projects-table li {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 0.25rem 0.5rem;
+  grid-template-columns: 72px 1fr;
+  gap: 0.25rem 1rem;
   margin-bottom: 0.9rem;
   list-style: none;
 }
