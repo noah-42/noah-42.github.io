@@ -316,3 +316,12 @@ h2:after {
     grid-template-columns: 1fr;
   }
 }
+
+.content h3,
+.content h3 a {
+  color: #0A66C2;
+}
+
+.content h3 a:hover {
+  color: #0A66C2;
+}
