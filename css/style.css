@@ -91,9 +91,12 @@ ul li {
 }
 
 #banner {
-  display: block;
-  margin: 0 0 12px 0;
-  max-height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 4px 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
 }
 
 #author-name {
@@ -154,7 +157,7 @@ ul li {
   }
 
   #banner {
-    margin: 0 0 12px 0;
+    margin: 0 10px 4px 0;
   }
 
   #author-name {
