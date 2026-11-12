@@ -231,3 +231,12 @@ h2 {
 h2:after {
   border-color: #444746;
 }
+
+#projects ul ul {
+  list-style: circle;
+  margin: 0.25rem 0 0.25rem 10px;
+}
+
+#projects ul ul li {
+  margin-bottom: 0.25rem;
+}
