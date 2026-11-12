@@ -198,3 +198,9 @@ h2 {
 h2:first-of-type {
   margin-top: 2rem;
 }
+
+.location {
+  font-style: italic;
+  color: #6a6a6a;
+  margin: 0 0 0.5rem 0;
+}
