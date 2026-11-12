@@ -181,3 +181,12 @@ ul li {
 .bottom-space {
   height: 140px;
 }
+
+a.plain-link {
+  color: inherit;
+}
+
+a.plain-link:hover {
+  color: inherit;
+  text-decoration: underline;
+}
