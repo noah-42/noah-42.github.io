@@ -223,3 +223,11 @@ h3 {
 .location + ul {
   margin-top: 0.1rem;
 }
+
+h2 {
+  color: #444746;
+}
+
+h2:after {
+  border-color: #444746;
+}
