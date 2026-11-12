@@ -25,6 +25,28 @@
         </ul>
       </div>
       <div class="clear"></div>
+      <div class="font-controls-row" aria-label="Text size">
+        <button id="font-minus" type="button" aria-label="Smaller text">&minus;</button>
+        <button id="font-plus" type="button" aria-label="Larger text">+</button>
+      </div>
+      <script>
+        (function () {
+          var base = 17;
+          var size = parseFloat(localStorage.getItem('font-size')) || base;
+          document.documentElement.style.fontSize = size + 'px';
+          window.addEventListener('DOMContentLoaded', function () {
+            var plus = document.getElementById('font-plus');
+            var minus = document.getElementById('font-minus');
+            function set(v) {
+              size = Math.min(22, Math.max(13, v));
+              document.documentElement.style.fontSize = size + 'px';
+              localStorage.setItem('font-size', size);
+            }
+            plus.addEventListener('click', function () { set(size + 1); });
+            minus.addEventListener('click', function () { set(size - 1); });
+          });
+        })();
+      </script>
       <hr />
 
       <div class="container content">
