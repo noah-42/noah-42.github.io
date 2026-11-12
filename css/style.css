@@ -298,3 +298,21 @@ h2:after {
 .font-controls {
   display: inline-block;
 }
+
+.skills-table li {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.25rem 2rem;
+  margin-bottom: 0.9rem;
+  list-style: none;
+}
+
+.skills-table .skill-name {
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .skills-table li {
+    grid-template-columns: 1fr;
+  }
+}
