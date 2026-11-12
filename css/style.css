@@ -240,3 +240,15 @@ h2:after {
 #projects ul ul li {
   margin-bottom: 0.25rem;
 }
+
+.content p,
+.content ul {
+  max-width: 65ch;
+  width: 100%;
+}
+
+.content h2,
+.content h3,
+.content hr {
+  max-width: 100%;
+}
