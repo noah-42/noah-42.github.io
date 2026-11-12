@@ -207,3 +207,7 @@ h2:first-of-type {
   color: #6a6a6a;
   margin: 0 0 0.25rem 0;
 }
+
+.location + ul {
+  margin-top: 0.1rem;
+}
