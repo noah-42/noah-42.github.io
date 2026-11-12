@@ -211,3 +211,15 @@ h2:first-of-type {
 .location + ul {
   margin-top: 0.1rem;
 }
+
+h3 {
+  margin-top: 2.4rem;
+}
+
+.location {
+  margin-top: -0.35rem;
+}
+
+.location + ul {
+  margin-top: 0.1rem;
+}
