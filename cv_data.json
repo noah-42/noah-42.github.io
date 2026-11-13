@@ -121,7 +121,7 @@
           "url": "https://www.freenet.de"
         }
       ],
-      "location": "Berlin (2012&ndash;2015)",
+      "location": "Berlin (Jul 2012&ndash;Mar 2015)",
       "bullets": [
         "Led TV &amp; digital marketing as well as product (consumer-facing app development, backend adtech) and content licensing (Electronic Arts, Warner Music)"
       ]
@@ -136,7 +136,7 @@
           "url": "https://www.fox.com"
         }
       ],
-      "location": "Los Angeles &amp; Berlin (2010&ndash;2012)",
+      "location": "Los Angeles &amp; Berlin (Mar 2010&ndash;Jun 2012)",
       "bullets": [
         "Responsible for digital marketing campaigns in the USA, Canada,\n        Brazil, Europe &amp; Australia"
       ]
@@ -270,18 +270,18 @@
     {
       "label": "Marketing",
       "items": [
+        "account management",
+        "agile",
         "branding",
         "business development",
-        "digital marketing",
-        "GTM",
-        "growth",
-        "performance marketing",
-        "agile",
         "customer profiling",
+        "digital marketing",
+        "growth",
+        "GTM",
+        "performance marketing",
         "product marketing",
-        "account management",
-        "software planning",
-        "QA"
+        "QA",
+        "software planning"
       ]
     }
   ],
