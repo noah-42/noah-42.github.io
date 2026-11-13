@@ -1,21 +1,21 @@
 {
   "summary": [
-    "Software engineering student at 42 Berlin who is actively building with AI on the side.",
-    "Over 15+ years in digital marketing &amp; product in pharmaceutical, B2B, and entertainment verticals."
+    "Software engineering student at 42 Berlin who is actively building with AI on the side",
+    "Over 15+ years in digital marketing &amp; product in pharmaceutical, B2B, and entertainment verticals"
   ],
   "projects": [
     {
       "name": "Jobscout",
-      "desc": "An automated data pipeline of job listings built for AI agents.",
+      "desc": "An automated data pipeline of job listings built for AI agents",
       "url": "https://www.noah42.com/jobscout/"
     },
     {
       "name": "Modelizer",
-      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and all your coding subscriptions."
+      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and all your coding subscriptions"
     },
     {
       "name": "Orb",
-      "desc": "A switchboard for AI assistants to manage access to in-house and third-party APIs."
+      "desc": "A switchboard for AI assistants to manage access to in-house and third-party APIs"
     }
   ],
   "experience": [
@@ -31,8 +31,8 @@
       ],
       "location": "Berlin (Jan 2026&ndash;present)",
       "bullets": [
-        "Project-based software engineering program with emphasis on hand coding &amp; fundamentals in C, Python.",
-        "Self-study/experimentation with agentic coding before starting the curriculum in May 2026."
+        "Project-based software engineering program with emphasis on hand coding &amp; fundamentals in C, Python",
+        "Self-study/experimentation with agentic coding before starting the curriculum in May 2026"
       ]
     },
     {
@@ -72,7 +72,7 @@
       ],
       "location": "Berlin (Oct 2020&ndash;Oct 2023)",
       "bullets": [
-        "Owned marketing, product, media buying, enterprise sales, and key account management."
+        "Owned marketing, product, media buying, enterprise sales, and key account management"
       ]
     },
     {
@@ -83,7 +83,7 @@
       ],
       "location": "Berlin (Sep 2017&ndash;Sep 2019)",
       "bullets": [
-        "Provide strategic guidance on projects related to digital marketing, product, venture investment &amp; business development."
+        "Provide strategic guidance on projects related to digital marketing, product, venture investment &amp; business development"
       ]
     },
     {
@@ -98,7 +98,7 @@
       ],
       "location": "Berlin (Mar 2016&ndash;Oct 2016)",
       "bullets": [
-        "Responsible for digital marketing campaigns for gaming brands."
+        "Responsible for digital marketing campaigns for gaming brands"
       ]
     },
     {
@@ -122,7 +122,7 @@
       ],
       "location": "Berlin (2012&ndash;2015)",
       "bullets": [
-        "Responsible for marketing and product, spanning digital and offline media (TV),\n        digital products (e.g. app development), and content licensing (games, music from major labels)."
+        "Led TV &amp; digital marketing as well as product (consumer-facing app development, backend adtech) and content licensing (Electronic Arts, Warner Music)"
       ]
     },
     {
@@ -137,18 +137,18 @@
       ],
       "location": "Los Angeles &amp; Berlin (2010&ndash;2012)",
       "bullets": [
-        "Responsible for digital marketing campaigns in the USA, Canada,\n        Brazil, Europe &amp; Australia."
+        "Responsible for digital marketing campaigns in the USA, Canada,\n        Brazil, Europe &amp; Australia"
       ]
     },
     {
       "heading_parts": [
         {
-          "text": "Consultant (Freelance)"
+          "text": "Executive MBA student &amp; Consultant (Freelance)"
         }
       ],
       "location": "New York &amp; Los Angeles (2008&ndash;2010)",
       "bullets": [
-        "Created marketing campaigns and programs for companies incl. Starbucks and Universal Music and served as product lead for Los Angeles-based game developer O Negative Media (the founder, my direct supervisor, later founded Scopely), while pursuing an Executive MBA at the Berlin School of Creative Leadership."
+        "Created marketing programs for companies incl. Starbucks &amp; Universal Music and also served as product lead for Los Angeles-based social game developer O Negative"
       ]
     },
     {
@@ -163,8 +163,8 @@
       ],
       "location": "New York (2005&ndash;2007)",
       "bullets": [
-        "Responsible for the recruitment of both advertisers and publishers and drove marketing deals that led to Inc. Magazine naming glispa the 11th fastest growing private company in the USA.",
-        "Sold and managed D2C and HCP marketing programs to pharma brands including AstraZeneca, Merck, Novartis, Novo Nordisk, Pfizer, and sanofi-aventis."
+        "Responsible for the recruitment of both advertisers and publishers and drove marketing deals that led to Inc. Magazine naming glispa the 11th fastest growing private company in the USA",
+        "Sold and managed D2C and HCP marketing programs to pharma brands including AstraZeneca, Merck, Novartis, Novo Nordisk, Pfizer, and sanofi-aventis"
       ]
     },
     {
@@ -179,7 +179,7 @@
       ],
       "location": "Washington, D.C. (2004&ndash;2005)",
       "bullets": [
-        "Led and managed a cross-functional team to launch an advertising-sponsored paywall & secured over 20 advertiser deals with companies incl. AOL, Blockbuster, eBay, Discover Card, Netflix & Rhapsody."
+        "Led and managed a cross-functional team to launch an advertising-sponsored paywall & secured over 20 advertiser deals with companies incl. AOL, Blockbuster, eBay, Discover Card, Netflix & Rhapsody"
       ]
     },
     {
@@ -194,7 +194,7 @@
       ],
       "location": "Ann Arbor, New York &amp; S&atilde;o Paulo (1998&ndash;2004)",
       "bullets": [
-        "Digital planning &amp; buying for GlaxoSmithKline across all DTC &amp; OTC brands as well as for Verizon Wireless &amp; Oracle."
+        "Digital planning &amp; buying for GlaxoSmithKline across all DTC &amp; OTC brands as well as for Verizon Wireless &amp; Oracle"
       ]
     }
   ],
