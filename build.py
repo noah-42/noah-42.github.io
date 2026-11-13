@@ -235,7 +235,7 @@ human = f'''<!DOCTYPE html>
     <meta name="description" content="personal website" />
     <meta name="author" content="Noah Robinson" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css?v=20261113" />
   </head>
   <body>
     <div class="wrapper">
