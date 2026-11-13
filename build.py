@@ -241,17 +241,17 @@ human = f'''<!DOCTYPE html>
     <div class="wrapper">
       <div class="navbar container">
         <a id="author-name" class="pull-left" href="./">Noah Robinson</a>
-        <ul id="navlist" class="pull-right navbar-ul">
-          <li class="pull-left nav-list"><a href="https://noah42.com">noah42.com</a></li>
-          <li class="pull-left nav-list">
+        <a class="pull-right nav-top-link" href="https://noah42.com">noah42.com</a>
+        <p id="headline">{data['headline']}</p>
+        <ul id="navlist" class="navbar-ul">
+          <li class="nav-list">
             <a target="_blank" rel="noopener" href="https://linkedin.com/in/noahrobinson" aria-label="LinkedIn"><img class="nav-icon" src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
           </li>
-          <li class="pull-left nav-list">
+          <li class="nav-list">
             <a target="_blank" rel="noopener" href="https://github.com/noah-42" aria-label="GitHub"><img class="nav-icon" src="https://github.com/favicon.ico" alt="GitHub" /></a>
           </li>
-          <li class="pull-left nav-list"><a href="./ats/">ATS</a></li>
+          <li class="nav-list"><a href="./ats/">ATS</a></li>
         </ul>
-        <p id="headline">{data['headline']}</p>
       </div>
       <hr />
 
