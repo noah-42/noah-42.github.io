@@ -245,9 +245,12 @@
       "label": "Tools",
       "items": [
         "Git",
+        "Google Workspace",
         "Jira",
         "Linux/bash",
+        "Microsoft Office",
         "Miro",
+        "Slack",
         "Trello",
         "UV",
         "Vim",
