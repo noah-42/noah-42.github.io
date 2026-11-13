@@ -42,8 +42,10 @@ def link_or_text(text: str, url: str | None, human: bool) -> str:
 
 summary = '\n'.join(f'          <li>{b}</li>' for b in data['summary'])
 
+visible_projects = [p for p in data['projects'] if not p.get('hidden', False)]
+
 projects = []
-for p in data['projects']:
+for p in visible_projects:
     name = link_or_text(p['name'], p.get('url'), True)
     projects.append(f'          <li><span class="project-name">{name}</span>\n'
                     f'            <span class="project-desc">{p["desc"]}</span>\n'
@@ -167,7 +169,7 @@ human = f'''<!DOCTYPE html>
 ats_summary = '\n'.join(f'      <li>{plain(b)}</li>' for b in data['summary'])
 
 ats_projects = '\n'.join(f'      <li>{plain(p["name"])}: {plain(p["desc"])}</li>'
-                         for p in data['projects'])
+                         for p in visible_projects)
 
 ats_experience = []
 for e in data['experience']:
