@@ -89,7 +89,16 @@
     {
       "heading_parts": [
         {
-          "text": "Head of Digital Marketing"
+          "text": "Career Break (Sabbatical)"
+        }
+      ],
+      "location": "Central &amp; South America (Nov 2016&ndash;Aug 2017)",
+      "bullets": []
+    },
+    {
+      "heading_parts": [
+        {
+          "text": "Head of Customer Acquisition"
         },
         {
           "text": "Merkur Interactive Services",
@@ -100,15 +109,6 @@
       "bullets": [
         "Responsible for digital marketing campaigns for gaming brands in Austria, Germany, Italy, Spain, & United Kingdom"
       ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Career Break (Sabbatical)"
-        }
-      ],
-      "location": "Central &amp; South America (Nov 2016&ndash;Aug 2017)",
-      "bullets": []
     },
     {
       "heading_parts": [
@@ -148,7 +148,8 @@
       ],
       "location": "New York &amp; Los Angeles (2008&ndash;2010)",
       "bullets": [
-        "Created marketing programs for companies incl. Starbucks &amp; Universal Music and also served as product lead for Los Angeles-based game developer O Negative"
+        "Created marketing programs for companies incl. Starbucks &amp; Universal Music",
+        "Served as product lead for Los Angeles-based game developer O Negative"
       ]
     },
     {
@@ -179,7 +180,8 @@
       ],
       "location": "Washington, D.C. (2004&ndash;2005)",
       "bullets": [
-        "Led and managed a cross-functional team to launch an advertising-sponsored paywall & secured over 20 advertiser deals with companies incl. AOL, Blockbuster, eBay, Discover Card, Netflix & Rhapsody"
+        "Led and managed a cross-functional team to launch an advertising-sponsored paywall",
+        "Secured over 20 advertiser deals with companies incl. AOL, Blockbuster, eBay, Discover Card, Netflix & Rhapsody"
       ]
     },
     {
@@ -272,7 +274,13 @@
         "digital marketing",
         "GTM",
         "growth",
-        "performance marketing"
+        "performance marketing",
+        "agile",
+        "customer profiling",
+        "product marketing",
+        "account management",
+        "software planning",
+        "QA"
       ]
     }
   ],
