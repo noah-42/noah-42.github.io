@@ -243,7 +243,7 @@ ats = f'''<!DOCTYPE html>
   </head>
   <body>
     <h1>Noah Robinson</h1>
-    <p class="contact">Berlin | linkedin.com/in/noahrobinson | github.com/noah-42 | noah42.com | <a href="../">human-readable version</a></p>
+    <p class="contact">Berlin | linkedin.com/in/noahrobinson | github.com/noah-42 | noah42.com | <a href="../">formatted version</a></p>
 
     <h2>Summary</h2>
     <ul>
