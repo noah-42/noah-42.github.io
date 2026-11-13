@@ -11,7 +11,12 @@
     },
     {
       "name": "Modelizer",
-      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and other coding subscriptions"
+      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and other coding subscriptions",
+      "desc_links": {
+        "Claude": "https://claude.com/product/claude-code",
+        "Codex": "https://chatgpt.com/codex",
+        "Grok": "https://x.ai/pricing"
+      }
     },
     {
       "name": "Orb",
@@ -47,13 +52,13 @@
     {
       "heading_parts": [
         {
-          "text": "Student (Full-Time)"
+          "text": "Student"
         },
         {
-          "text": "German"
+          "text": "German &amp; Integrationkurs"
         },
         {
-          "text": "VHS",
+          "text": "VHS (Volkshochschule)",
           "url": "https://www.berlin.de/vhs/volkshochschulen/friedrichshain-kreuzberg/"
         }
       ],
@@ -107,7 +112,7 @@
       ],
       "location": "Berlin (Mar 2016&ndash;Oct 2016)",
       "bullets": [
-        "Responsible for digital marketing campaigns for gaming brands in Austria, Germany, Italy, Spain, & United Kingdom"
+        "Responsible for digital marketing campaigns for gaming brands in Austria, Germany, Italy, Spain & United Kingdom"
       ]
     },
     {
@@ -243,7 +248,7 @@
     {
       "label": "Tools",
       "items": [
-        "Git",
+        "git",
         "Google Workspace",
         "Instinct",
         "Jira",
