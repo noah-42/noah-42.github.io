@@ -137,12 +137,36 @@ ul li {
   margin: 0 14px 0 0;
 }
 
+.name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .name-icons {
   margin-left: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .name-icons a {
-  margin-right: 8px;
+  display: inline-flex;
+}
+
+.name-icons .nav-icon {
+  vertical-align: baseline;
+}
+
+.name-icons .github-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.contact-row .github-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
 }
 
 .pull-left {
