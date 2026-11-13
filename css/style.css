@@ -125,17 +125,22 @@ ul li {
 }
 
 .navbar-ul {
-  display: inline-block;
-  float: right;
-  margin: 0;
-  padding: 5px 0 5px 0;
+  display: block;
+  margin: 10px 0 0 0;
+  padding: 0;
   list-style: none;
   font-size: 0.95rem;
 }
 
 .nav-list {
   display: inline-block;
-  margin: 0 5px 0 10px;
+  margin: 0 14px 0 0;
+}
+
+.nav-top-link {
+  display: inline-block;
+  padding: 5px 0 5px 0;
+  font-size: 0.95rem;
 }
 
 .pull-left {
@@ -179,12 +184,8 @@ ul li {
   }
 
   #navlist {
-    padding: 10px 0 10px 0;
-    margin: 0;
-    display: block;
-    float: none;
-    text-align: center;
-    width: 100%;
+    padding: 0;
+    margin: 10px 0 0 0;
   }
 
   #navlist li {
