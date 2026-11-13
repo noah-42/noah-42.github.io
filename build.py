@@ -250,6 +250,7 @@ human = f'''<!DOCTYPE html>
             <a target="_blank" rel="noopener" href="https://github.com/noah-42">GitHub</a>
           </li>
         </ul>
+        <p id="headline">{data['headline']}</p>
       </div>
       <div class="ats-note"><a href="./ats/">ATS-friendly version</a></div>
       <hr />
@@ -344,6 +345,7 @@ ats = f'''<!DOCTYPE html>
       h1 {{ font-size: 20pt; margin-bottom: 4px; color: #0A66C2; }}
       h2 {{ font-size: 15pt; color: #444746; border-bottom: 1px solid #444746; margin-top: 20px; margin-bottom: 8px; }}
       h3 {{ font-size: 12pt; margin: 12px 0 2px; color: #0A66C2; }}
+      p.headline {{ margin: 0 0 6px; color: #444746; }}
       p.location {{ font-style: italic; color: #3d3d3d; margin: 0 0 4px; }}
       ul {{ margin: 4px 0 10px 22px; padding: 0; }}
       li {{ margin-bottom: 2px; color: #24292f; }}
@@ -353,6 +355,7 @@ ats = f'''<!DOCTYPE html>
   </head>
   <body>
     <h1>Noah Robinson</h1>
+    <p class="headline">{plain(data['headline'])}</p>
     <p class="contact">Berlin | linkedin.com/in/noahrobinson | github.com/noah-42 | noah42.com | <a href="../">formatted version</a></p>
 
     <h2>Summary</h2>
