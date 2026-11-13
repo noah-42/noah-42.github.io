@@ -58,6 +58,10 @@ def human_bullet_text(text: str) -> str:
         'Inc. Magazine',
         '<a class="plain-link" href="https://www.inc.com" target="_blank" rel="noopener">Inc. Magazine</a>',
         1,
+    ).replace(
+        '11th fastest growing private company in the USA',
+        '<a class="plain-link" href="https://www.forbes.com/sites/mnewlands/2015/11/11/this-ceo-bootstrapped-his-mobile-ad-company-to-400-billion-impressions-a-month-heres-how/" target="_blank" rel="noopener">11th fastest growing private company in the USA</a>',
+        1,
     )
 
 summary = '\n'.join(f'          <li>{human_summary_text(b)}</li>' for b in data['summary'])
