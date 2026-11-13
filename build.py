@@ -198,8 +198,25 @@ contact_urls = {
     'github.com/noah-42': 'https://github.com/noah-42',
     'noah42.com': 'https://noah42.com',
 }
+contact_icons = {
+    'LinkedIn': 'https://www.linkedin.com/favicon.ico',
+    'GitHub': 'https://github.com/favicon.ico',
+}
+
+
+def contact_row(label: str, url: str) -> str:
+    icon = contact_icons.get(label)
+    prefix = (
+        f'<img src="{icon}" alt="{label}" '
+        f'style="width:16px;height:16px;vertical-align:-2px;margin-right:6px" />'
+        if icon
+        else ''
+    )
+    return f'          <div class="contact-row">{prefix}<a href="{contact_urls[url]}">{url}</a></div>'
+
+
 contact_lines = '\n'.join(
-    f'          <li>{label}: <a href="{contact_urls[url]}">{url}</a></li>'
+    contact_row(label, url)
     for line in data['contact']['lines']
     for label, url in [line.split(': ', 1)]
 )
@@ -264,9 +281,9 @@ human = f'''<!DOCTYPE html>
 
         <h2 id="contact">Contact</h2>
 
-        <ul>
+        <div class="contact-list">
 {contact_lines}
-        </ul>
+        </div>
 
         <div class="bottom-space"></div>
       </div>
