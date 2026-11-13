@@ -42,7 +42,7 @@ def link_or_text(text: str, url: str | None, human: bool) -> str:
 
 def human_summary_text(text: str) -> str:
     """Link 42 Berlin in the human-readable opening Summary sentence only."""
-    prefix = 'Software engineering student at 42 Berlin who is actively building with AI on the side'
+    prefix = 'Software engineering student at 42 Berlin who, on the side, is actively building with AI'
     if text.startswith(prefix):
         return text.replace(
             '42 Berlin',
@@ -74,6 +74,19 @@ HUMAN_LINKS = {
 }
 
 HUMAN_SKILL_LINKS = {
+    'Claude Code': 'https://claude.com/product/claude-code',
+    'Codex': 'https://chatgpt.com/codex',
+    'Cursor': 'https://cursor.com',
+    'Google Workspace': 'https://workspace.google.com/',
+    'Jira': 'https://www.atlassian.com/software/jira',
+    'Microsoft Office': 'https://www.microsoft.com/en/microsoft-365/microsoft-office',
+    'Miro': 'https://miro.com/',
+    'Slack': 'https://slack.com/',
+    'Trello': 'https://trello.com/',
+    'UV': 'https://docs.astral.sh/uv/',
+    'VS Code': 'https://code.visualstudio.com/',
+    'Vim': 'https://www.vim.org/',
+    'Zed': 'https://zed.dev/',
     'Grok Bot': 'https://x.ai/bot',
     'Instinct': 'https://www.instinct.com',
     'OmO': 'https://omo.dev/',
@@ -156,7 +169,16 @@ for s_ in data['skills']:
                   f'          </li>')
 skills_html = '\n'.join(skills)
 
-contact_lines = '\n'.join(f'          <li>{c}</li>' for c in data['contact']['lines'])
+contact_urls = {
+    'linkedin.com/in/noahrobinson': 'https://linkedin.com/in/noahrobinson',
+    'github.com/noah-42': 'https://github.com/noah-42',
+    'noah42.com': 'https://noah42.com',
+}
+contact_lines = '\n'.join(
+    f'          <li>{label}: <a href="{contact_urls[url]}">{url}</a></li>'
+    for line in data['contact']['lines']
+    for label, url in [line.split(': ', 1)]
+)
 
 human = f'''<!DOCTYPE html>
 <html lang="en">
