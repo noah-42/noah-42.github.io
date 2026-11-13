@@ -89,96 +89,6 @@
     },
     {
       "heading_parts": [
-  "summary": [
-    "Software engineering student at 42 Berlin who, on the side, is actively building with AI",
-    "Over 15+ years in digital marketing &amp; product in pharmaceutical, B2B, and entertainment verticals"
-  ],
-  "projects": [
-    {
-      "name": "Jobscout",
-      "desc": "An automated data pipeline of job listings built for AI agents",
-      "url": "https://www.noah42.com/jobscout/"
-    },
-    {
-      "name": "Modelizer",
-      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and any other coding subscriptions"
-    },
-    {
-      "name": "Orb",
-      "desc": "A switchboard to manage access for AI agents to in-house and third-party APIs",
-      "hidden": true
-    }
-  ],
-  "experience": [
-    {
-      "heading_parts": [
-        {
-          "text": "Student"
-        },
-        {
-          "text": "42 Berlin",
-          "url": "https://www.42berlin.de"
-        }
-      ],
-      "location": "Berlin (Jan 2026&ndash;present)",
-      "bullets": [
-        "Project-based software engineering program with emphasis on coding by hand &amp; fundamentals in C, Python",
-        "Self-study/experimentation with agentic coding before starting the curriculum in May 2026"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Career Break (Sabbatical)"
-        }
-      ],
-      "location": "USA &amp; Berlin (Dec 2024&ndash;Dec 2025)",
-      "bullets": []
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Student (Full-Time)"
-        },
-        {
-          "text": "German"
-        },
-        {
-          "text": "VHS",
-          "url": "https://www.berlin.de/vhs/volkshochschulen/friedrichshain-kreuzberg/"
-        }
-      ],
-      "location": "Berlin (Nov 2023&ndash;Nov 2024)",
-      "bullets": []
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Marketing &amp; Product"
-        },
-        {
-          "text": "Keyword Hero",
-          "url": "https://www.keyword-hero.com"
-        }
-      ],
-      "location": "Berlin (Oct 2020&ndash;Oct 2023)",
-      "bullets": [
-        "Owned marketing, product, media buying, enterprise sales, and key account management"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Consultant (Freelance)"
-        }
-      ],
-      "location": "Berlin (Sep 2017&ndash;Sep 2019)",
-      "bullets": [
-        "Provide strategic guidance on projects related to digital marketing, product, venture investment &amp; business development"
-      ]
-    },
-    {
-      "heading_parts": [
         {
           "text": "Career Break (Sabbatical)"
         }
@@ -337,250 +247,68 @@
         "Git",
         "Google Workspace",
         "Instinct",
-  "summary": [
-    "Software engineering student at 42 Berlin who, on the side, is actively building with AI",
-    "Over 15+ years in digital marketing &amp; product in pharmaceutical, B2B, and entertainment verticals"
-  ],
-  "projects": [
-    {
-      "name": "Jobscout",
-      "desc": "An automated data pipeline of job listings built for AI agents",
-      "url": "https://www.noah42.com/jobscout/"
-    },
-    {
-      "name": "Modelizer",
-      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and any other coding subscriptions"
-    },
-    {
-      "name": "Orb",
-      "desc": "A switchboard to manage access for AI agents to in-house and third-party APIs",
-      "hidden": true
-    }
-  ],
-  "experience": [
-    {
-      "heading_parts": [
-        {
-          "text": "Student"
-        },
-        {
-          "text": "42 Berlin",
-          "url": "https://www.42berlin.de"
-        }
-      ],
-      "location": "Berlin (Jan 2026&ndash;present)",
-      "bullets": [
-        "Project-based software engineering program with emphasis on coding by hand &amp; fundamentals in C, Python",
-        "Self-study/experimentation with agentic coding before starting the curriculum in May 2026"
+        "Jira",
+        "Linux/bash",
+        "Microsoft Office",
+        "Miro",
+        "Slack",
+        "Trello",
+        "UV",
+        "Vim",
+        "VS Code",
+        "Zed"
       ]
     },
     {
-      "heading_parts": [
-        {
-          "text": "Career Break (Sabbatical)"
-        }
-      ],
-      "location": "USA &amp; Berlin (Dec 2024&ndash;Dec 2025)",
-      "bullets": []
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Student (Full-Time)"
-        },
-        {
-          "text": "German"
-        },
-        {
-          "text": "VHS",
-          "url": "https://www.berlin.de/vhs/volkshochschulen/friedrichshain-kreuzberg/"
-        }
-      ],
-      "location": "Berlin (Nov 2023&ndash;Nov 2024)",
-      "bullets": []
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Marketing &amp; Product"
-        },
-        {
-          "text": "Keyword Hero",
-          "url": "https://www.keyword-hero.com"
-        }
-      ],
-      "location": "Berlin (Oct 2020&ndash;Oct 2023)",
-      "bullets": [
-        "Owned marketing, product, media buying, enterprise sales, and key account management"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Consultant (Freelance)"
-        }
-      ],
-      "location": "Berlin (Sep 2017&ndash;Sep 2019)",
-      "bullets": [
-        "Provide strategic guidance on projects related to digital marketing, product, venture investment &amp; business development"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Career Break (Sabbatical)"
-        }
-      ],
-      "location": "Central &amp; South America (Nov 2016&ndash;Aug 2017)",
-      "bullets": []
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Customer Acquisition"
-        },
-        {
-          "text": "Merkur Interactive Services",
-          "url": "https://www.merkur.group"
-        }
-      ],
-      "location": "Berlin (Mar 2016&ndash;Oct 2016)",
-      "bullets": [
-        "Responsible for digital marketing campaigns for gaming brands in Austria, Germany, Italy, Spain, & United Kingdom"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Marketing &amp; Product"
-        },
-        {
-          "text": "freenet digital",
-          "url": "https://www.freenet.de"
-        }
-      ],
-      "location": "Berlin (Jul 2012&ndash;Mar 2015)",
-      "bullets": [
-        "Led all TV, web and mobile marketing as well as product (consumer-facing app development, backend adtech) &amp; content licensing (Electronic Arts, Warner Music)"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Digital Marketing"
-        },
-        {
-          "text": "Fox Mobile Group",
-          "url": "https://www.fox.com"
-        }
-      ],
-      "location": "Los Angeles &amp; Berlin (Mar 2010&ndash;Jun 2012)",
-      "bullets": [
-        "Responsible for 8-figure web and mobile marketing budget in the USA, Canada, Brazil, Europe &amp; Australia"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Executive MBA student &amp; Consultant (Freelance)"
-        }
-      ],
-      "location": "New York &amp; Los Angeles (Jan 2008&ndash;Feb 2010)",
-      "bullets": [
-        "Created marketing programs for companies incl. Starbucks &amp; Universal Music",
-        "Served as product lead for Los Angeles-based game developer O Negative"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Growth"
-        },
-        {
-          "text": "glispa",
-          "url": "https://www.linkedin.com/company/glispa-gmbh/"
-        }
-      ],
-      "location": "New York (Apr 2005&ndash;Nov 2007)",
-      "bullets": [
-        "Responsible for sales and onboarding of both advertisers and publishers and drove marketing deals that led to Inc. Magazine naming glispa the 11th fastest growing private company in the USA",
-        "Sold and managed D2C and HCP digital marketing programs to pharma brands including AstraZeneca, Merck, Novartis, Pfizer, and Sanofi"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Head of Business Development"
-        },
-        {
-          "text": "Gratis Internet",
-          "url": "https://www.linkedin.com/company/gratis-internet/"
-        }
-      ],
-      "location": "Washington, D.C. (Aug 2004&ndash;Mar 2005)",
-      "bullets": [
-        "Led and managed a cross-functional team to launch an advertising-sponsored paywall",
-        "Secured over 20 advertiser deals with companies incl. AOL, Blockbuster, eBay, Discover Card & Netflix"
-      ]
-    },
-    {
-      "heading_parts": [
-        {
-          "text": "Media Supervisor"
-        },
-        {
-          "text": "Mediacom (now EssenceMediacom)",
-          "url": "https://www.essencemediacom.com"
-        }
-      ],
-      "location": "Ann Arbor, New York &amp; S&atilde;o Paulo (Jan 1998&ndash;Jun 2004)",
-      "bullets": [
-        "Digital planning &amp; buying for GlaxoSmithKline across all DTC &amp; OTC brands as well as for Verizon Wireless &amp; Oracle"
-      ]
-    }
-  ],
-  "education": [
-    {
-      "location": "Berlin &amp; New York (2013)",
-      "heading_parts": [
-        {
-          "text": "Executive MBA, Berlin School of Creative Leadership",
-          "url": "https://www.berlin-school.com"
-        }
-      ]
-    },
-    {
-      "location": "Ann Arbor (1998)",
-      "heading_parts": [
-        {
-          "text": "B.A. Honors College, University of Michigan",
-          "url": "https://www.umich.edu"
-        }
-      ]
-    },
-    {
-      "location": "Oxford (1997)",
-      "heading_parts": [
-        {
-          "text": "Study abroad"
-        },
-        {
-          "text": "St. Catherine's College, University of Oxford",
-          "url": "https://www.stcatz.ox.ac.uk/"
-        }
-      ]
-    }
-  ],
-  "skills": [
-    {
-      "label": "Programming languages",
+      "label": "AI-assisted coding",
       "items": [
-        "C",
-        "Python"
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "Grok Bot",
+        "OmO",
+        "OpenCode",
+        "Pi"
       ]
     },
     {
-      "label": "Tools",
+      "label": "Marketing",
       "items": [
-        "Git",
-        "Google Workspace",
+        "account management",
+        "agile",
+        "branding",
+        "business development",
+        "customer profiling",
+        "digital marketing",
+        "growth",
+        "GTM",
+        "performance marketing",
+        "product marketing",
+        "QA",
+        "software planning"
+      ]
+    }
+  ],
+  "languages": "English (Native), German (B1), Spanish (A2), Portuguese (A2)",
+  "contact": {
+    "lines": [
+      "LinkedIn: linkedin.com/in/noahrobinson",
+      "GitHub: github.com/noah-42",
+      "Web: noah42.com"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/noahrobinson"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/noah-42"
+      },
+      {
+        "label": "noah42.com",
+        "url": "https://noah42.com"
+      }
+    ]
+  }
+}
