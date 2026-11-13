@@ -92,6 +92,9 @@ HUMAN_SKILL_LINKS = {
     'OmO': 'https://omo.dev/',
     'OpenCode': 'https://opencode.ai/',
     'Pi': 'https://pi.dev/',
+    'Python': 'https://www.python.org/',
+    'C': 'https://www.c-language.org/',
+    'git': 'https://git-scm.com/',
 }
 
 
@@ -122,8 +125,15 @@ visible_projects = [p for p in data['projects'] if not p.get('hidden', False)]
 projects = []
 for p in visible_projects:
     name = link_or_text(p['name'], p.get('url'), True)
+    desc = p['desc']
+    for word, url in (p.get('desc_links') or {}).items():
+        desc = desc.replace(
+            word,
+            f'<a class="plain-link" href="{url}" target="_blank" rel="noopener">{word}</a>',
+            1,
+        )
     projects.append(f'          <li><span class="project-name">{name}</span>\n'
-                    f'            <span class="project-desc">{p["desc"]}</span>\n'
+                    f'            <span class="project-desc">{desc}</span>\n'
                     f'          </li>')
 projects_html = '\n'.join(projects)
 
@@ -156,9 +166,23 @@ for e in data['education']:
                      f'        <p class="location">{loc}</p>')
 education_html = '\n'.join(education)
 
+HUMAN_SKILL_LINKS_PARTIAL = {
+    'Linux': 'https://www.linux.org/',
+}
+
+
 def human_skill_item(item: str) -> str:
     url = HUMAN_SKILL_LINKS.get(item)
-    return f'<a class="plain-link" href="{url}" target="_blank" rel="noopener">{item}</a>' if url else item
+    if url:
+        return f'<a class="plain-link" href="{url}" target="_blank" rel="noopener">{item}</a>'
+    for key, partial_url in HUMAN_SKILL_LINKS_PARTIAL.items():
+        if key in item:
+            return item.replace(
+                key,
+                f'<a class="plain-link" href="{partial_url}" target="_blank" rel="noopener">{key}</a>',
+                1,
+            )
+    return item
 
 
 skills = []
