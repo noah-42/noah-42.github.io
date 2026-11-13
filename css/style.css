@@ -345,3 +345,9 @@ h2:after {
   text-align: right;
   font-size: 0.85rem;
 }
+
+/* 42 Berlin heading link: black like body text, underline only on hover */
+.content h3 a.plain-link[href="https://www.42berlin.de"],
+.content h3 a.plain-link[href="https://www.42berlin.de"]:hover {
+  color: var(--text);
+}
