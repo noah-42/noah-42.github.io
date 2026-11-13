@@ -137,10 +137,12 @@ ul li {
   margin: 0 14px 0 0;
 }
 
-.nav-top-link {
-  display: inline-block;
-  padding: 5px 0 5px 0;
-  font-size: 0.95rem;
+.name-icons {
+  margin-left: 10px;
+}
+
+.name-icons a {
+  margin-right: 8px;
 }
 
 .pull-left {
