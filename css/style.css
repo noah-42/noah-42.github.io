@@ -115,6 +115,7 @@ ul li {
   clear: both;
   margin: 0;
   font-size: 1.05rem;
+  font-style: italic;
 }
 
 .nav-icon {
