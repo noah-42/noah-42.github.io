@@ -210,6 +210,11 @@ a.plain-link:hover {
   text-decoration: underline;
 }
 
+h3 a.plain-link,
+h3 a.plain-link:hover {
+  text-decoration: underline;
+}
+
 h2 {
   margin-top: 3.5rem;
 }
