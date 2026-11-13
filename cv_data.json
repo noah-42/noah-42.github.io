@@ -242,7 +242,10 @@
       "label": "Tools",
       "items": [
         "Git",
+        "Jira",
         "Linux/bash",
+        "Miro",
+        "Trello",
         "UV",
         "Vim",
         "VS Code",
