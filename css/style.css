@@ -147,7 +147,7 @@ ul li {
   margin-left: 18px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 .name-icons a {
@@ -159,8 +159,8 @@ ul li {
 }
 
 .name-icons .github-icon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 }
 
 .contact-row .github-icon {
