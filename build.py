@@ -240,17 +240,12 @@ human = f'''<!DOCTYPE html>
   <body>
     <div class="wrapper">
       <div class="navbar container">
-        <a id="author-name" class="pull-left" href="./">Noah Robinson</a>
-        <a class="pull-right nav-top-link" href="https://noah42.com">noah42.com</a>
+        <a id="author-name" href="./">Noah Robinson</a>
+        <span class="name-icons">
+          <a target="_blank" rel="noopener" href="https://linkedin.com/in/noahrobinson" aria-label="LinkedIn"><img class="nav-icon" src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
+          <a target="_blank" rel="noopener" href="https://github.com/noah-42" aria-label="GitHub"><img class="nav-icon" src="https://github.com/favicon.ico" alt="GitHub" /></a>
+        </span>
         <p id="headline">{data['headline']}</p>
-        <ul id="navlist" class="navbar-ul">
-          <li class="nav-list">
-            <a target="_blank" rel="noopener" href="https://linkedin.com/in/noahrobinson" aria-label="LinkedIn"><img class="nav-icon" src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
-          </li>
-          <li class="nav-list">
-            <a target="_blank" rel="noopener" href="https://github.com/noah-42" aria-label="GitHub"><img class="nav-icon" src="https://github.com/favicon.ico" alt="GitHub" /></a>
-          </li>
-        </ul>
       </div>
       <hr />
 
