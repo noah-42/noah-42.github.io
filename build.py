@@ -52,9 +52,39 @@ def human_summary_text(text: str) -> str:
     return text
 
 
+HUMAN_LINKS = {
+    'AOL': 'https://aol.com',
+    'AstraZeneca': 'https://www.astrazeneca.com/',
+    'Blockbuster': 'https://www.blockbuster.com/',
+    'Discover Card': 'https://www.discover.com',
+    'Electronic Arts': 'https://www.ea.com',
+    'eBay': 'https://www.ebay.com',
+    'GlaxoSmithKline': 'https://gsk.com',
+    'Merck': 'https://www.merckgroup.com/',
+    'Netflix': 'https://www.netflix.com',
+    'Novartis': 'https://novartis.com',
+    'O Negative': 'https://www.linkedin.com/company/o-negative-media-llc',
+    'Oracle': 'https://www.oracle.com',
+    'Pfizer': 'https://pfizer.com',
+    'Sanofi': 'https://sanofi.com',
+    'Starbucks': 'https://starbucks.com',
+    'Universal Music': 'https://universalmusic.com',
+    'Verizon Wireless': 'https://www.verizon.com/',
+    'Warner Music': 'https://www.wmg.com',
+}
+
+HUMAN_SKILL_LINKS = {
+    'Grok Bot': 'https://x.ai/bot',
+    'Instinct': 'https://www.instinct.com',
+    'OmO': 'https://omo.dev/',
+    'OpenCode': 'https://opencode.ai/',
+    'Pi': 'https://pi.dev/',
+}
+
+
 def human_bullet_text(text: str) -> str:
-    """Link Inc. Magazine in the human-readable page only."""
-    return text.replace(
+    """Link named companies in the human-readable page only."""
+    text = text.replace(
         'Inc. Magazine',
         '<a class="plain-link" href="https://www.inc.com" target="_blank" rel="noopener">Inc. Magazine</a>',
         1,
@@ -63,6 +93,14 @@ def human_bullet_text(text: str) -> str:
         '<a class="plain-link" href="https://www.forbes.com/sites/mnewlands/2015/11/11/this-ceo-bootstrapped-his-mobile-ad-company-to-400-billion-impressions-a-month-heres-how/" target="_blank" rel="noopener">11th fastest growing private company in the USA</a>',
         1,
     )
+    for name in sorted(HUMAN_LINKS, key=len, reverse=True):
+        url = HUMAN_LINKS[name]
+        text = text.replace(
+            name,
+            f'<a class="plain-link" href="{url}" target="_blank" rel="noopener">{name}</a>',
+            1,
+        )
+    return text
 
 summary = '\n'.join(f'          <li>{human_summary_text(b)}</li>' for b in data['summary'])
 
@@ -105,9 +143,14 @@ for e in data['education']:
                      f'        <p class="location">{loc}</p>')
 education_html = '\n'.join(education)
 
+def human_skill_item(item: str) -> str:
+    url = HUMAN_SKILL_LINKS.get(item)
+    return f'<a class="plain-link" href="{url}" target="_blank" rel="noopener">{item}</a>' if url else item
+
+
 skills = []
 for s_ in data['skills']:
-    items = ', '.join(s_['items'])
+    items = ', '.join(human_skill_item(i) for i in s_['items'])
     skills.append(f'          <li><span class="skill-name">{s_["label"]}</span>\n'
                   f'            <span class="skill-desc">{items}</span>\n'
                   f'          </li>')
@@ -134,7 +177,7 @@ human = f'''<!DOCTYPE html>
         <ul id="navlist" class="pull-right navbar-ul">
           <li class="pull-left nav-list"><a href="https://noah42.com">noah42.com</a> /</li>
           <li class="pull-left nav-list">
-            <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/noahrobinson">LinkedIn</a> /
+            <a target="_blank" rel="noopener" href="https://linkedin.com/in/noahrobinson">LinkedIn</a> /
           </li>
           <li class="pull-left nav-list">
             <a target="_blank" rel="noopener" href="https://github.com/noah-42">GitHub</a>
