@@ -111,6 +111,12 @@ ul li {
   text-decoration: none;
 }
 
+#headline {
+  clear: both;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
 .navbar-ul {
   display: inline-block;
   float: right;
