@@ -353,5 +353,5 @@ h2:after {
 }
 .content h3 a.plain-link[href="https://www.42berlin.de"],
 .content h3 a.plain-link[href="https://www.42berlin.de"]:hover {
-  color: var(--text);
+  color: #0A66C2;
 }
