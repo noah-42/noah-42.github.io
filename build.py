@@ -242,17 +242,17 @@ human = f'''<!DOCTYPE html>
       <div class="navbar container">
         <a id="author-name" class="pull-left" href="./">Noah Robinson</a>
         <ul id="navlist" class="pull-right navbar-ul">
-          <li class="pull-left nav-list"><a href="https://noah42.com">noah42.com</a> /</li>
+          <li class="pull-left nav-list"><a href="https://noah42.com">noah42.com</a></li>
           <li class="pull-left nav-list">
-            <a target="_blank" rel="noopener" href="https://linkedin.com/in/noahrobinson">LinkedIn</a> /
+            <a target="_blank" rel="noopener" href="https://linkedin.com/in/noahrobinson" aria-label="LinkedIn"><img class="nav-icon" src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" /></a>
           </li>
           <li class="pull-left nav-list">
-            <a target="_blank" rel="noopener" href="https://github.com/noah-42">GitHub</a>
+            <a target="_blank" rel="noopener" href="https://github.com/noah-42" aria-label="GitHub"><img class="nav-icon" src="https://github.com/favicon.ico" alt="GitHub" /></a>
           </li>
+          <li class="pull-left nav-list"><a href="./ats/">ATS-friendly version</a></li>
         </ul>
         <p id="headline">{data['headline']}</p>
       </div>
-      <div class="ats-note"><a href="./ats/">ATS-friendly version</a></div>
       <hr />
 
       <div class="container content">
