@@ -204,21 +204,25 @@ contact_icons = {
 }
 
 
-def contact_row(label: str, url: str) -> str:
+def contact_item(label: str, url: str) -> str:
     icon = contact_icons.get(label)
-    prefix = (
-        f'<img src="{icon}" alt="{label}" '
-        f'style="width:16px;height:16px;vertical-align:-2px;margin-right:6px" />'
-        if icon
-        else ''
+    if icon:
+        return (
+            f'<a href="{contact_urls[url]}" aria-label="{label}" style="margin-right:14px">'
+            f'<img src="{icon}" alt="{label}" '
+            f'style="width:16px;height:16px;vertical-align:-2px" /></a>'
+        )
+    return f'<a href="{contact_urls[url]}">{url}</a>'
+
+
+contact_lines = (
+    '          <div class="contact-row">'
+    + ''.join(
+        contact_item(label, url)
+        for line in data['contact']['lines']
+        for label, url in [line.split(': ', 1)]
     )
-    return f'          <div class="contact-row">{prefix}<a href="{contact_urls[url]}">{url}</a></div>'
-
-
-contact_lines = '\n'.join(
-    contact_row(label, url)
-    for line in data['contact']['lines']
-    for label, url in [line.split(': ', 1)]
+    + '</div>'
 )
 
 human = f'''<!DOCTYPE html>
