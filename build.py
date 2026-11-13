@@ -249,7 +249,7 @@ human = f'''<!DOCTYPE html>
           <li class="pull-left nav-list">
             <a target="_blank" rel="noopener" href="https://github.com/noah-42" aria-label="GitHub"><img class="nav-icon" src="https://github.com/favicon.ico" alt="GitHub" /></a>
           </li>
-          <li class="pull-left nav-list"><a href="./ats/">ATS-friendly version</a></li>
+          <li class="pull-left nav-list"><a href="./ats/">ATS</a></li>
         </ul>
         <p id="headline">{data['headline']}</p>
       </div>
@@ -345,7 +345,7 @@ ats = f'''<!DOCTYPE html>
       h1 {{ font-size: 20pt; margin-bottom: 4px; color: #0A66C2; }}
       h2 {{ font-size: 15pt; color: #444746; border-bottom: 1px solid #444746; margin-top: 20px; margin-bottom: 8px; }}
       h3 {{ font-size: 12pt; margin: 12px 0 2px; color: #0A66C2; }}
-      p.headline {{ margin: 0 0 6px; color: #444746; }}
+      p.headline {{ margin: 0 0 6px; color: #444746; font-style: italic; }}
       p.location {{ font-style: italic; color: #3d3d3d; margin: 0 0 4px; }}
       ul {{ margin: 4px 0 10px 22px; padding: 0; }}
       li {{ margin-bottom: 2px; color: #24292f; }}
