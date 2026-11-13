@@ -15,7 +15,7 @@
     },
     {
       "name": "Orb",
-      "desc": "A switchboard for AI assistants to manage access to in-house and third-party APIs"
+      "desc": "A switchboard to manage access for AI agents to in-house and third-party APIs"
     }
   ],
   "experience": [
