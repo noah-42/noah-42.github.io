@@ -40,7 +40,19 @@ def link_or_text(text: str, url: str | None, human: bool) -> str:
 
 # ---------------- HUMAN PAGE ----------------
 
-summary = '\n'.join(f'          <li>{b}</li>' for b in data['summary'])
+def human_summary_text(text: str) -> str:
+    """Link 42 Berlin in the human-readable opening Summary sentence only."""
+    prefix = 'Software engineering student at 42 Berlin who is actively building with AI on the side'
+    if text.startswith(prefix):
+        return text.replace(
+            '42 Berlin',
+            '<a class="plain-link summary-link" href="https://www.42berlin.de" target="_blank" rel="noopener">42 Berlin</a>',
+            1,
+        )
+    return text
+
+
+summary = '\n'.join(f'          <li>{human_summary_text(b)}</li>' for b in data['summary'])
 
 visible_projects = [p for p in data['projects'] if not p.get('hidden', False)]
 
