@@ -56,7 +56,7 @@ HUMAN_LINKS = {
     'AOL': 'https://aol.com',
     'AstraZeneca': 'https://www.astrazeneca.com/',
     'Blockbuster': 'https://www.blockbuster.com/',
-    'Discover Card': 'https://www.discover.com',
+    'Discover': 'https://www.discover.com',
     'Electronic Arts': 'https://www.ea.com',
     'eBay': 'https://www.ebay.com',
     'GlaxoSmithKline': 'https://gsk.com',
