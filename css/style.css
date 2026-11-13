@@ -117,6 +117,12 @@ ul li {
   font-size: 1.05rem;
 }
 
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+}
+
 .navbar-ul {
   display: inline-block;
   float: right;
