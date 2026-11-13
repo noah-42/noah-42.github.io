@@ -6,16 +6,16 @@
   "projects": [
     {
       "name": "Jobscout",
-      "desc": "An automated data pipeline of job listings built for AI agents",
+      "desc": "An automated data pipeline of job listings --> built for AI agents",
       "url": "https://www.noah42.com/jobscout/"
     },
     {
       "name": "Modelizer",
-      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and any other coding subscriptions"
+      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and other coding subscriptions"
     },
     {
       "name": "Orb",
-      "desc": "A switchboard to manage access for AI agents to in-house and third-party APIs"
+      "desc": "A switchboard to manage access of AI agents to in-house and third-party APIs"
     }
   ],
   "experience": [
