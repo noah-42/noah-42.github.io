@@ -250,7 +250,6 @@ human = f'''<!DOCTYPE html>
           <li class="nav-list">
             <a target="_blank" rel="noopener" href="https://github.com/noah-42" aria-label="GitHub"><img class="nav-icon" src="https://github.com/favicon.ico" alt="GitHub" /></a>
           </li>
-          <li class="nav-list"><a href="./ats/">ATS</a></li>
         </ul>
       </div>
       <hr />
