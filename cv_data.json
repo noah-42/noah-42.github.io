@@ -11,11 +11,12 @@
     },
     {
       "name": "Modelizer",
-      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and all your coding subscriptions"
+      "desc": "Track LLM usage in real time across Claude, Codex, Grok, and any additional coding subscriptions"
     },
     {
       "name": "Orb",
-      "desc": "A switchboard to manage access for AI agents to in-house and third-party APIs"
+      "desc": "A switchboard to manage access for AI agents to in-house and third-party APIs",
+      "hidden": true
     }
   ],
   "experience": [
@@ -146,7 +147,7 @@
           "text": "Executive MBA student &amp; Consultant (Freelance)"
         }
       ],
-      "location": "New York &amp; Los Angeles (2008&ndash;2010)",
+      "location": "New York &amp; Los Angeles (Jan 2008&ndash;Feb 2010)",
       "bullets": [
         "Created marketing programs for companies incl. Starbucks &amp; Universal Music",
         "Served as product lead for Los Angeles-based game developer O Negative"
@@ -162,7 +163,7 @@
           "url": "https://www.linkedin.com/company/glispa-gmbh/"
         }
       ],
-      "location": "New York (2005&ndash;2007)",
+      "location": "New York (Apr 2005&ndash;Nov 2007)",
       "bullets": [
         "Responsible for the recruitment of both advertisers and publishers and drove marketing deals that led to Inc. Magazine naming glispa the 11th fastest growing private company in the USA",
         "Sold and managed D2C and HCP digital marketing programs to pharma brands including AstraZeneca, Merck, Novartis, Pfizer, and sanofi-aventis"
@@ -178,7 +179,7 @@
           "url": "https://www.linkedin.com/company/gratis-internet/"
         }
       ],
-      "location": "Washington, D.C. (2004&ndash;2005)",
+      "location": "Washington, D.C. (Aug 2004&ndash;Mar 2005)",
       "bullets": [
         "Led and managed a cross-functional team to launch an advertising-sponsored paywall",
         "Secured over 20 advertiser deals with companies incl. AOL, Blockbuster, eBay, Discover Card, Netflix & Rhapsody"
@@ -194,7 +195,7 @@
           "url": "https://www.essencemediacom.com"
         }
       ],
-      "location": "Ann Arbor, New York &amp; S&atilde;o Paulo (1998&ndash;2004)",
+      "location": "Ann Arbor, New York &amp; S&atilde;o Paulo (Jan 1998&ndash;Jun 2004)",
       "bullets": [
         "Digital planning &amp; buying for GlaxoSmithKline across all DTC &amp; OTC brands as well as for Verizon Wireless &amp; Oracle"
       ]
