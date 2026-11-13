@@ -52,6 +52,14 @@ def human_summary_text(text: str) -> str:
     return text
 
 
+def human_bullet_text(text: str) -> str:
+    """Link Inc. Magazine in the human-readable page only."""
+    return text.replace(
+        'Inc. Magazine',
+        '<a class="plain-link" href="https://www.inc.com" target="_blank" rel="noopener">Inc. Magazine</a>',
+        1,
+    )
+
 summary = '\n'.join(f'          <li>{human_summary_text(b)}</li>' for b in data['summary'])
 
 visible_projects = [p for p in data['projects'] if not p.get('hidden', False)]
@@ -77,7 +85,7 @@ for e in data['experience']:
     loc = f'{city} ({dates})' if dates else city
     bullets = ''
     if e['bullets']:
-        items = '\n'.join(f'          <li>{b}</li>' for b in e['bullets'])
+        items = '\n'.join(f'          <li>{human_bullet_text(b)}</li>' for b in e['bullets'])
         bullets = f'        <ul>\n{items}\n        </ul>\n'
     experience.append(f'        <h3>{heading}</h3>\n'
                       f'        <p class="location">{loc}</p>\n'
