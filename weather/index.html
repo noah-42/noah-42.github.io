@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en" data-theme="blue_0A66C2">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F7F5F1">
+  <meta name="description" content="Berlin freezing seasons, sunrise and sunset, and the next solstices">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iIzFDMUExNiIgZD0iTTAgMGgxOHY2SDZ2MTJIMHptMzAgMGgxOHYxOGgtNlY2SDMwek0wIDMwaDZ2MTJoMTJ2Nkgwem00MiAwaDZ2MThIMzB2LTZoMTJ6Ii8+PHJlY3QgeD0iMTciIHk9IjE3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHJ4PSIxIiBmaWxsPSIjMEE2NkMyIi8+PC9zdmc+">
+  <title>Berlin weather — Noah Robinson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Space+Grotesk:wght@400..700&amp;display=swap">
+  <style>
+:root {
+  --accent: #4B1FA8;
+  --accent-border: #D6CCF0;
+  --accent-field: #F1ECFB;
+  --tint: #ECE6FA;
+  --button-bg: #ECE6FA;
+  --button-hover: #DFD5F3;
+  --button-text: #321A66;
+  --contact-bg: var(--tint);
+  --contact-ink: var(--ink);
+  --chat-sent-bg: #D9FDD3;
+  --chat-received-bg: #FFFDF9;
+  --chat-action: #168C45;
+  --chat-wave: #5E8C6A;
+  --chat-check: #2F6B3A;
+  --flow-sent: #D9F7C7;
+  --paper: #F7F5F1;
+  --card: #FFFDF9;
+  --ink: #1C1A16;
+  --muted: #7A7366;
+  --line: #E6DDCC;
+  --heading: "Bricolage Grotesque", system-ui, sans-serif;
+  --body: "Space Grotesk", system-ui, sans-serif;
+}
+:root[data-theme="soft-red"] {
+  --accent: #BF3540;
+  --accent-border: #E0A8AF;
+  --accent-field: #FBEAED;
+  --tint: #F6DDE0;
+  --button-bg: #F2D0D4;
+  --button-hover: #EAB9C0;
+  --button-text: #5E2932;
+  --contact-bg: var(--accent);
+  --contact-ink: #FFFFFF;
+  --chat-sent-bg: var(--button-bg);
+  --chat-action: var(--accent);
+  --chat-wave: var(--accent);
+  --chat-check: var(--accent);
+  --flow-sent: var(--button-bg);
+}
+:root[data-theme="blue"] {
+  --accent: #1769AA;
+  --accent-border: #A9CBE8;
+  --accent-field: #EFF6FC;
+  --tint: #E5F1FB;
+  --button-bg: #DCECF9;
+  --button-hover: #CAE0F3;
+  --button-text: #17466D;
+  --contact-bg: var(--accent);
+  --contact-ink: #FFFFFF;
+  --chat-sent-bg: var(--button-bg);
+  --chat-action: var(--accent);
+  --chat-wave: var(--accent);
+  --chat-check: var(--accent);
+  --flow-sent: var(--button-bg);
+}
+:root[data-theme="blue_0A66C2"] {
+  --accent: #0A66C2;
+  --accent-border: #A8C7E7;
+  --accent-field: #EEF6FC;
+  --tint: #E7F0FA;
+  --button-bg: #DCEBFA;
+  --button-hover: #CADFF4;
+  --button-text: #124C7B;
+  --contact-bg: var(--accent);
+  --contact-ink: #FFFFFF;
+  --chat-sent-bg: var(--button-bg);
+  --chat-action: var(--accent);
+  --chat-wave: var(--accent);
+  --chat-check: var(--accent);
+  --flow-sent: var(--button-bg);
+}
+:root[data-theme="black-yellow"] {
+  --accent: #1C1A16;
+  --accent-border: #E4C200;
+  --accent-field: #FFF9DB;
+  --tint: #FFF1B8;
+  --button-bg: #F3E8B4;
+  --button-hover: #F0DE8A;
+  --button-text: #1C1A16;
+  --contact-bg: var(--tint);
+  --contact-ink: var(--ink);
+  --chat-sent-bg: var(--button-bg);
+  --chat-action: var(--accent);
+  --chat-wave: var(--accent);
+  --chat-check: var(--accent);
+  --flow-sent: var(--button-bg);
+}
+:root[data-theme="black-yellow"] h1 em { color: var(--ink); background: #F2C000; padding: .08em .14em; border-radius: .08em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+:root[data-theme="black-yellow"] .jobscout-mark rect { fill: #F2C000; }
+:root[data-theme="black-yellow"] .masthead img { filter: grayscale(1) brightness(0); }
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.45 var(--body); }
+h1, h2, h3, h4, h5, p, figure, blockquote, dl, dd { margin: 0; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; object-fit: contain; }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+[hidden] { display: none !important; }
+h1, h2, h3, h4, h5 { font-family: var(--heading); line-height: 1.04; }
+h1 em { color: var(--accent); font-style: normal; }
+
+.wrap { width: min(calc(100% - 64px), 1240px); margin-inline: auto; }
+.masthead, .masthead nav, .identity, .brand { display: flex; align-items: center; }
+.masthead { justify-content: space-between; gap: 12px; padding-block: 22px; }
+.identity, .brand { gap: 12px; }
+.brand { font: 700 22px/1.1 var(--heading); }
+.masthead a { color: var(--accent); }
+.masthead .brand:hover { text-decoration: none; }
+.tagline { color: var(--muted); font-size: 15px; margin-left: 6px; }
+.masthead nav { gap: 20px; font-weight: 600; font-size: 15px; }
+footer.wrap { display: flex; justify-content: space-between; gap: 12px; padding: 22px 0 30px; color: var(--muted); font-size: 13px; }
+body:has(.job-hero) footer { padding-top: 60px; }
+
+.visually-hidden:not(:focus) {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.skip:focus { position: absolute; z-index: 2; padding: 12px; background: var(--card); }
+.section-label, .text-link { color: var(--accent); font: 700 14px/1.3 var(--body); }
+.caption { color: var(--muted); font-size: 12px; margin-top: 12px; }
+.muted { color: var(--muted); }
+.card { background: var(--card); border-radius: 24px; padding: 28px; }
+.chip {
+  display: inline-block; width: fit-content; white-space: nowrap;
+  border-radius: 999px; padding: 5px 12px; background: var(--tint);
+  color: var(--accent); font-size: 13px; font-weight: 600;
+}
+.pill {
+  display: inline-flex; align-items: center; justify-content: center; width: fit-content;
+  border: 1px solid transparent; border-radius: 999px; padding: 12px 20px;
+  background: var(--button-bg); color: var(--button-text); font-weight: 700; font-size: 14px;
+  box-shadow: 0 8px 20px -8px rgb(28 26 22 / 18%); text-align: center;
+}
+.pill:hover:not(:disabled) { background: var(--button-hover); text-decoration: none; }
+.pill:disabled { opacity: .64; box-shadow: none; }
+.pill-light, .pill-outline { color: var(--accent); background: white; box-shadow: none; }
+.pill-light:focus-visible { outline-color: white; }
+.pill-outline { border-color: var(--accent-border); }
+.pill-light:hover:not(:disabled), .pill-outline:hover:not(:disabled) { background: var(--tint); }
+.status { margin-top: 8px; font-size: 13px; color: var(--muted); }
+.status:empty { display: none; }
+
+.home-hero { padding: 44px 0 62px; container-type: inline-size; }
+.home-hero h1 { font-size: min(168px, 14cqw); line-height: .9; letter-spacing: -.045em; white-space: nowrap; }
+.labeled-section {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px;
+  padding: 28px 0 40px;
+}
+.labeled-section > div:first-child .caption { display: block; margin-top: 3px; }
+.help-grid, .search-tips, .flow-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.help-grid h3 { color: var(--accent); font-size: 30px; margin-bottom: 8px; }
+.help-grid p, .side-project p, .feature-heading p { color: var(--muted); }
+.icon-tile { display: grid; place-items: center; flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--tint); color: var(--accent); }
+.icon-tile svg { width: 24px; height: 24px; }
+.help-grid .card { min-height: 256px; }
+.help-grid p { max-width: 250px; }
+.help-grid .icon-tile { margin-bottom: 16px; }
+.feature-heading { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
+.feature-intro { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 14px; row-gap: 8px; align-items: center; }
+.jobscout-mark { display: block; width: 48px; height: 48px; flex: none; }
+.feature-heading img { border-radius: 12px; }
+.feature-heading h3 { font-size: 44px; }
+.feature-intro p { grid-column: 2; }
+.feature-heading > .chip { margin-left: auto; }
+.feature-heading .text-link { white-space: nowrap; }
+.demo { display: grid; grid-template-columns: 3fr 2fr; padding: 0; border-radius: 28px; box-shadow: 0 1px 0 var(--line), 0 24px 60px -30px rgb(60 40 20 / 25%); }
+.demo-search { min-width: 0; padding: 32px; }
+.demo-search h3 { font-size: clamp(34px, 4.45vw, 64px); line-height: .9; letter-spacing: -.035em; margin-bottom: 22px; }
+.search-bar { display: flex; align-items: center; padding: 5px; border: 1px solid #D8CFBF; border-radius: 999px; background: white; }
+.search-bar textarea {
+  flex: 1; min-width: 0; height: 1.4em; padding: 0; margin: 8px 12px 8px 15px;
+  border: 0; resize: none; background: transparent; line-height: 1.35;
+}
+.search-bar .pill { box-shadow: none; padding: 14px 24px; }
+.job-rows { margin-top: 18px; }
+.job-row { display: grid; align-items: center; grid-template-columns: 1.15fr 1fr auto; gap: 12px; border-top: 1px solid var(--line); padding: 12px 0; line-height: 1.2; }
+.job-row strong { font-size: 15px; }
+.job-row .chip { font-size: 11px; padding: 3px 8px; }
+.job-meta, .job-age { color: var(--muted); font-size: 14px; }
+.job-age { font-size: 13px; text-align: right; }
+.agent-callout { display: flex; flex-direction: column; align-items: flex-start; background: var(--tint); border-radius: 20px; margin: 12px; padding: 32px; }
+.agent-callout h4 { font-size: clamp(23px, 2.3vw, 32px); letter-spacing: -.02em; margin: 8px 0 12px; }
+.agent-callout p { color: #4E483D; margin-bottom: 20px; }
+.stats { width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 24px; border-top: 1px solid var(--accent-border); }
+.agent-callout .pill { margin-bottom: 28px; }
+.stats strong { display: block; font: 700 clamp(30px, 3.85vw, 56px)/1 var(--heading); letter-spacing: -.045em; color: var(--accent); }
+.stats small { color: #4E483D; font-size: 13px; }
+.topic-buttons, .pipeline-steps { display: grid; gap: 16px; }
+.topic-buttons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.topic-button, .listing-tile {
+  border: 0; border-radius: 24px; background: var(--card); padding: 24px;
+  color: var(--ink); text-align: left; min-width: 0;
+}
+.topic-button { display: flex; align-items: center; gap: 18px; }
+.topic-button:hover, .listing-tile:hover { box-shadow: 0 8px 22px rgb(28 26 22 / 8%); }
+.topic-button[aria-expanded="true"], .listing-tile[aria-expanded="true"] { box-shadow: 0 0 0 2px var(--accent); }
+.topic-button .icon-tile { width: 52px; height: 52px; border-radius: 14px; }
+.topic-button > span:nth-child(2) { flex: 1; }
+.topic-button strong, .listing-tile-copy strong { display: block; font: 700 24px/1.15 var(--heading); margin-bottom: 4px; }
+.topic-button > span:nth-child(2) > span, .listing-tile-copy > span:last-child { display: block; color: var(--muted); font-size: 15px; }
+.disclosure-label { color: var(--accent); white-space: nowrap; font-weight: 700; font-size: 14px; }
+.disclosure-label::after { content: " ▾"; }
+[aria-expanded="true"] > .disclosure-label::after { content: " ▴"; }
+.topic-panel { margin-top: 28px; }
+.pipeline-title { font-size: clamp(28px, 2.8vw, 40px); letter-spacing: -.025em; margin-bottom: 12px; }
+.pipeline-summary { font-size: 17px; color: var(--muted); max-width: 620px; margin-bottom: 22px; }
+.listing-tiles { display: grid; grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr); gap: 16px; align-items: stretch; }
+.listing-tile { display: grid; grid-template-columns: minmax(80px, 37%) minmax(0, 1fr); gap: 8px 20px; align-items: center; padding: 22px; }
+.listing-tile-copy strong { font-size: 22px; }
+.listing-tile-copy > span:last-child { font-size: 14px; }
+.listing-tile .disclosure-label { grid-column: 2; }
+.listing-art { grid-row: span 2; height: 120px; border-radius: 16px; position: relative; isolation: isolate; overflow: hidden; display: grid; place-items: center; }
+.paper-art { background: #F1EDE6; }
+.paper-art > span, .paper-art::before, .paper-art::after {
+  width: 56%; height: 78%; border-radius: 6px; background: white; box-shadow: 0 1px 3px rgb(28 26 22 / 12%);
+}
+.paper-art::before, .paper-art::after { content: ""; position: absolute; z-index: -1; }
+.paper-art::before { transform: translate(10px, 4px) rotate(8deg); }
+.paper-art::after { transform: translate(4px, 1px) rotate(-6deg); }
+.paper-art > span { padding: 9px; display: flex; flex-direction: column; gap: 6px; transform: translateX(-4px) rotate(-1deg); }
+.paper-art b { white-space: nowrap; font-size: 10px; }
+.paper-art i { height: 5px; border-radius: 4px; background: #D8D1C4; }
+.paper-art i:nth-child(odd) { width: 66%; }
+.record-art { background: var(--tint); }
+.record-art > span {
+  display: grid; gap: 5px; border: 1.5px solid var(--accent); background: white;
+  border-radius: 8px; padding: 8px; width: min(calc(100% - 12px), 124px);
+}
+.record-art i { display: block; position: relative; justify-self: end; margin-left: 15px; background: var(--tint); color: var(--accent); border-radius: 999px; padding: 2px 5px; white-space: nowrap; font: 700 8px/1.2 var(--body); }
+.record-art i::before { content: ""; position: absolute; right: calc(100% + 5px); top: 50%; width: 10px; height: 4px; border-radius: 2px; background: #D8D1C4; transform: translateY(-50%); }
+.listing-panel { margin-top: 16px; }
+.raw-posting p { font-size: 14px; line-height: 1.55; color: #5C564B; margin-top: 12px; }
+.raw-posting p.caption { color: var(--muted); font-size: 13px; }
+.clean-posting { background: white; outline: 2px solid var(--accent); outline-offset: -1px; }
+.clean-posting dl { margin-top: 12px; }
+.clean-posting dl div, .education div { display: grid; grid-template-columns: minmax(72px, 38%) 1fr; padding: 10px 0; border-bottom: 1px solid var(--line); gap: 8px; align-items: baseline; }
+.clean-posting dl div:last-child, .education div:last-child { border-bottom: 0; }
+.clean-posting dt { color: var(--muted); font-size: 13px; font-weight: 600; }
+.clean-posting dd { font-size: 15px; font-weight: 600; }
+.comparison-arrow, .step-badge { display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: white; }
+.comparison-arrow { width: 48px; height: 48px; font-size: 22px; align-self: center; justify-self: center; }
+.pipeline-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.pipeline-steps li { display: flex; flex-direction: column; gap: 6px; padding: 22px; }
+.pipeline-steps h4 { font: 700 17px/1.2 var(--body); }
+.pipeline-steps p { font-size: 14px; color: var(--muted); margin-bottom: 6px; }
+.pipeline-steps .chip { white-space: normal; margin-top: auto; }
+.pipeline-number { font: 700 34px/1 var(--heading); color: var(--accent); }
+.side-project { display: grid; grid-template-columns: 72px minmax(110px, 22%) 1fr; align-items: center; gap: 20px; padding: 18px 0; }
+.side-project:first-child { padding-top: 0; }
+.side-project + .side-project { border-top: 1px solid var(--line); }
+.side-project img { border-radius: 12px; }
+.side-project h3 { font-size: 30px; }
+.side-project .section-label { font-size: 13px; }
+.about-grid { display: grid; grid-template-columns: 248px minmax(0, 1fr) minmax(190px, 34%); gap: 44px; }
+.previous-employers { border-left: 1px solid var(--line); padding-left: 32px; display: flex; flex-direction: column; }
+.previous-employers h4 { margin-bottom: 12px; }
+.portrait { border-radius: 24px; filter: grayscale(1); object-fit: cover; }
+.about-grid h3 { font-size: 32px; margin-bottom: 14px; color: #3F3A31; }
+.about-grid p { max-width: 22rem; font-size: 17px; line-height: 1.6; color: #3F3A31; }
+.about-grid p + p { margin-top: 12px; }
+.company-logos { flex: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; gap: 6px 24px; }
+.company-logos img { width: 100%; max-width: 160px; height: 98px; margin-inline: auto; filter: grayscale(1); mix-blend-mode: multiply; }
+.client-names { display: flex; flex-wrap: wrap; font-size: 20px; line-height: 1.6; font-weight: 500; }
+.client-names li:not(:last-child)::after { content: "/"; color: #B8AC99; margin: 0 8px; }
+.education div { grid-template-columns: minmax(136px, 192px) 1fr; }
+.education div:first-child { padding-top: 0; }
+.education dt { font-weight: 600; }
+.education dd { color: var(--muted); }
+.contact { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 36px 48px; margin-top: 20px; background: var(--contact-bg); color: var(--contact-ink); border-radius: 28px; }
+.contact h2 { font-size: 48px; letter-spacing: -.035em; }
+.contact .pill { white-space: nowrap; }
+
+.job-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: clamp(30px, 5.56vw, 80px); padding: 36px 0 54px; }
+.job-hero-copy { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+.job-hero-copy > .pill { margin-top: auto; }
+.job-brand { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-bottom: 22px; }
+.job-brand .jobscout-mark { border-radius: 12px; }
+.job-brand strong { font: 700 28px/1 var(--heading); }
+.job-hero h1 { font-size: clamp(50px, 5.83vw, 84px); line-height: 1.1; letter-spacing: -.045em; margin-bottom: 20px; }
+.job-lead { color: #4E483D; font-size: 22px; line-height: 1.4; }
+.feature-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 26px; }
+.hero-results { width: min(100%, 620px); margin: 0 0 26px; padding: 8px 22px 16px; }
+.hero-results .job-row { grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 2px 10px; padding: 14px 0; border-top: 0; border-bottom: 1px solid var(--line); }
+.hero-results .job-row strong { font-size: 16px; }
+.hero-results .chip { grid-column: 2; grid-row: 1 / span 2; font-size: 12px; }
+.hero-phone { width: min(100%, 354px); position: relative; justify-self: center; margin-top: 10px; }
+.hero-phone figcaption { position: absolute; top: 100%; width: 100%; text-align: center; }
+.chat-phone {
+  min-height: 100%; display: flex; flex-direction: column; overflow: hidden; background: white;
+  border: 9px solid var(--ink); border-radius: 42px; color: #111B21;
+  box-shadow: 0 30px 60px -30px rgb(28 26 22 / 35%); font-size: 13px;
+}
+.chat-status, .chat-header, .chat-compose, .chat-file, .voice-note, .waveform { display: flex; align-items: center; }
+.chat-status { justify-content: space-between; padding: 10px 22px 5px; }
+.chat-status span { font-size: 8px; letter-spacing: 1px; }
+.chat-header { gap: 10px; padding: 8px 14px 12px; border-bottom: 1px solid #E9EDEF; }
+.chat-header strong, .chat-header small, .chat-file strong, .chat-file small { display: block; }
+.chat-header strong { font-size: 15px; }
+.chat-header small, .chat-file small { color: #536770; font-size: 11px; }
+.chat-back { color: var(--accent); font-size: 24px; line-height: 1; }
+.chat-avatar, .chat-circle { display: grid; place-items: center; flex: none; border-radius: 50%; }
+.chat-avatar { width: 34px; height: 34px; background: var(--tint); color: var(--accent); font-size: 15px; font-weight: 700; }
+.chat-circle { width: 26px; height: 26px; background: var(--chat-action); color: white; font-size: 11px; }
+.chat-messages { flex: 1; display: flex; flex-direction: column; gap: 6px; background: #EFEAE2; padding: 16px 11px; }
+.chat-bubble { background: var(--chat-sent-bg); border-radius: 14px; padding: 8px 10px; line-height: 1.4; box-shadow: 0 1px 1px rgb(0 0 0 / 6%); }
+.chat-received { background: var(--chat-received-bg); }
+.chat-sent { align-self: flex-end; max-width: 84%; border-top-right-radius: 4px; }
+.chat-received { align-self: flex-start; max-width: 92%; border-top-left-radius: 4px; }
+.chat-time { display: block; text-align: right; color: #536770; font-size: 10px; }
+.sent-time { align-self: flex-end; margin: -2px 2px 4px; }
+.voice-note { max-width: 100%; gap: 7px; }
+.voice-note > span:last-child { color: #465A65; font-size: 11px; }
+.waveform { gap: 2px; flex-shrink: 1; overflow: hidden; }
+.waveform i { width: 3px; height: var(--bar-height); flex: none; border-radius: 2px; background: var(--chat-wave); }
+.chat-file { gap: 9px; padding: 8px; border-radius: 9px; background: rgb(255 255 255 / 55%); }
+.chat-file > span { flex: none; width: 28px; height: 32px; display: grid; place-items: end center; padding-bottom: 3px; border: 1px solid #D1D7DB; border-radius: 5px; background: white; color: #536770; font-size: 8px; font-weight: 700; }
+.chat-file strong { font-size: 12px; overflow-wrap: anywhere; }
+.chat-received ol { list-style: decimal inside; display: grid; gap: 16px; margin: 16px 0; }
+.chat-compose { gap: 9px; padding: 10px 13px 16px; background: #F6F5F3; color: #536770; }
+.chat-compose span:nth-child(2) { flex: 1; background: white; color: #657987; padding: 8px 12px; border-radius: 999px; }
+.chat-compose .chat-circle { width: 34px; height: 34px; font-size: 14px; }
+
+.guide-step { --step-column: 160px; padding: 22px 0 10px; scroll-margin-top: 12px; }
+.guide-step:has(.guide-toggle[aria-expanded="false"]) { border-top: 1px solid var(--line); }
+.guide-toggle { width: 100%; border: 0; padding: 0; text-align: left; background: none; display: grid; grid-template-columns: var(--step-column) minmax(0, 1fr) auto; align-items: center; }
+.guide-toggle[aria-expanded="true"] { cursor: default; }
+.step-badge { width: 56px; height: 56px; font: 700 22px/1 var(--heading); }
+.guide-title { display: block; font: 700 30px/1.04 var(--heading); letter-spacing: -.035em; margin-bottom: 4px; }
+.step-lead { display: block; color: #5C564B; font: 400 15px/1.45 var(--body); }
+.guide-toggle[aria-expanded="false"] .guide-title { color: var(--muted); }
+.guide-toggle[aria-expanded="false"] .step-lead { color: var(--muted); }
+.guide-toggle[aria-expanded="false"] .step-badge { background: #E7E1D6; color: var(--muted); }
+.guide-toggle[aria-expanded="false"]:hover .guide-title { color: var(--ink); }
+.guide-open { display: block; visibility: hidden; font: 700 14px/1.2 var(--body); color: var(--accent); background: var(--card); padding: 9px 16px; border-radius: 999px; margin-left: 12px; }
+.guide-toggle[aria-expanded="false"] .guide-open { visibility: visible; }
+.guide-step[data-done] .guide-toggle[aria-expanded="false"] .step-badge { background: var(--tint); color: var(--accent); }
+.guide-step[data-done] .guide-open { color: var(--muted); }
+.guide-content { margin: 26px 0 0 var(--step-column); }
+.step-next { margin-top: 26px; box-shadow: none; }
+.token-grid, .query-examples { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.token-card { padding: 28px; }
+.token-card h3 { color: var(--muted); font: 700 12px/1.25 var(--body); margin: 20px 20px 34px; }
+.token-form, .token-value { display: flex; align-items: stretch; gap: 10px; }
+.token-card .caption { font-size: 13px; }
+.secret-field { position: relative; flex: 1; min-width: 0; display: flex; }
+.secret-field input { width: 100%; border: 1px solid #D8CFBF; border-radius: 999px; background: white; padding: 12px 42px 12px 18px; font-size: 14px; }
+.secret-field input::placeholder { color: var(--muted); }
+.token-value input { border-color: transparent; color: var(--accent); background: var(--accent-field); }
+.token-value input::placeholder { color: var(--accent); font: 14px ui-monospace, monospace; }
+.secret-toggle { position: absolute; right: 5px; top: 50%; transform: translateY(-50%); border: 0; border-radius: 50%; background: transparent; color: var(--muted); padding: 8px; display: grid; place-items: center; }
+.secret-toggle:hover, .secret-toggle[aria-pressed="true"] { background: var(--tint); color: var(--accent); }
+.token-grid .pill { white-space: nowrap; }
+.agent-picker { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.agent-picker button {
+  min-height: 72px; display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border: 2px solid transparent; border-radius: 20px;
+  background: var(--card); font-size: 15px; font-weight: 700; text-align: left; line-height: 1.15;
+}
+.agent-picker button:hover { background: var(--tint); }
+.agent-picker button[aria-pressed="true"] { border-color: var(--accent); background: white; }
+.agent-picker button:has(.agent-plus) { color: var(--muted); }
+.theme-color-filters { position: absolute; }
+.masthead img { filter: url(#accent-indigo); }
+:root[data-theme="soft-red"] .masthead img { filter: url(#accent-soft-red); }
+:root[data-theme="blue"] .masthead img { filter: url(#accent-blue); }
+:root[data-theme="blue_0A66C2"] .masthead img { filter: url(#accent-blue_0A66C2); }
+:root[data-theme="black-yellow"] .masthead img { filter: url(#accent-black-yellow); }
+.agent-picker img { filter: grayscale(1); }
+.agent-picker button[aria-pressed="true"] img { filter: grayscale(1) url(#accent-indigo); }
+.agent-picker button[aria-pressed="true"] .agent-plus { color: var(--button-text); background: var(--button-bg); }
+:root[data-theme="soft-red"] .agent-picker button[aria-pressed="true"] img { filter: grayscale(1) url(#accent-soft-red); }
+:root[data-theme="blue"] .agent-picker button[aria-pressed="true"] img { filter: grayscale(1) url(#accent-blue); }
+:root[data-theme="blue_0A66C2"] .agent-picker button[aria-pressed="true"] img { filter: grayscale(1) url(#accent-blue_0A66C2); }
+:root[data-theme="black-yellow"] .agent-picker button[aria-pressed="true"] img { filter: grayscale(1) url(#accent-black-yellow); }
+.agent-picker img, .agent-plus { flex: 0 0 auto; border-radius: 10px; }
+.agent-plus { display: grid; place-items: center; width: 36px; height: 36px; background: #ECE6DB; color: var(--muted); }
+.agent-flow { margin-top: 22px; }
+.flow-grid { counter-reset: flow; }
+.flow-frame { counter-increment: flow; padding: 22px; }
+.flow-frame h4 { font: 700 16px/1.25 var(--body); margin-bottom: 14px; }
+.flow-frame h4::before { content: counter(flow) " "; color: var(--accent); }
+.bubble { border-radius: 16px; padding: 10px 14px; font-size: 14px; line-height: 1.4; }
+.outgoing { background: var(--tint); color: var(--ink); border-bottom-right-radius: 4px; }
+.incoming { background: #F0EDE7; border-bottom-left-radius: 4px; }
+.flow-frame > * + :not(h4) { margin-top: 10px; }
+.receipt, .replica-label, .vault-link { display: flex; gap: 8px; align-items: center; }
+.receipt { width: fit-content; flex-wrap: wrap; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: white; font-weight: 700; font-size: 13px; }
+.receipt span:first-child { color: var(--chat-check); }
+.secure-receipt { color: var(--accent); border-color: var(--accent-border); }
+.replica { display: grid; gap: 12px; padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: 0 6px 18px -12px rgb(28 26 22 / 24%); }
+.replica h5 { font-size: 24px; }
+.replica p { color: var(--muted); font-size: 14px; line-height: 1.45; }
+.replica-label { font-size: 15px; }
+.replica-label svg, .vault-link svg { flex-shrink: 0; }
+.replica-close { margin-left: auto; border-radius: 50%; background: #F0EDE7; color: var(--muted); width: 24px; height: 24px; display: grid; place-items: center; }
+.demo-field { display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 10px 14px; border: 1px solid #D8CFBF; border-radius: 12px; background: var(--card); letter-spacing: .13em; }
+.demo-field svg { color: var(--muted); }
+.demo-caret { width: 2px; height: 18px; background: var(--accent); }
+.demo-save { padding: 12px; border-radius: 14px; text-align: center; background: var(--ink); color: white; font-size: 14px; font-weight: 700; }
+.replica-security { padding-top: 7px; border-top: 1px solid var(--line); color: var(--muted); text-align: center; font-size: 12px; }
+.replica-security strong { color: var(--ink); }
+.replica-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.replica-footer small { display: flex; gap: 6px; align-items: center; font-size: 12px; line-height: 1.3; color: var(--muted); }
+.replica-footer small svg { flex: none; }
+.demo-submit { padding: 8px 14px; background: #ECE6DB; color: var(--muted); border-radius: 999px; font-size: 13px; font-weight: 700; }
+.demo-submit.filled { background: var(--button-bg); color: var(--button-text); }
+#flow-grok .flow-frame:not(:first-child) > :nth-child(2) { margin-top: 72px; }
+#flow-instinct .outgoing { color: var(--ink); background: var(--flow-sent); }
+#flow-instinct .incoming, .vault-link { background: white; border: 1px solid var(--line); }
+#flow-instinct .demo-save, .vault-check { background: var(--ink); color: white; }
+.vault-link { padding: 12px; border-radius: 14px; font-size: 14px; }
+.vault-link small { display: block; color: var(--muted); }
+.vault-tags { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; font-weight: 700; }
+.vault-tags span { background: #F0EDE7; border-radius: 999px; padding: 4px 9px; }
+.replica .vault-warning { font-size: 13px; }
+.vault-saved { text-align: center; justify-items: center; padding: 28px 14px; }
+.vault-check { border-radius: 50%; width: 52px; height: 52px; display: grid; place-items: center; font-size: 24px; }
+.flow-note { max-width: 920px; background: var(--tint); border-radius: 16px; padding: 16px 18px; margin-top: 16px; color: #4E483D; font-size: 14px; }
+.query-examples h3 { font-size: 26px; }
+.query-examples blockquote, .search-tips blockquote { border-left: 3px solid var(--accent); padding: 2px 0 2px 12px; }
+.query-examples blockquote { font-weight: 600; margin: 12px 0 16px; }
+.query-examples dl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 14px; color: #4E483D; }
+.query-examples dt { font-weight: 700; font-size: 13px; color: var(--ink); margin-bottom: 4px; }
+.search-tips { margin-top: 16px; }
+.search-tips .card { display: flex; flex-direction: column; gap: 12px; padding: 22px; }
+.search-tips h3 { font-size: 20px; }
+.search-tips blockquote { font-size: 15px; }
+.search-tips .section-label { display: block; margin-bottom: 3px; font-size: 12px; }
+
+@media (max-width: 1080px) {
+  .feature-heading { gap: 12px; flex-wrap: wrap; }
+  .feature-heading > div { flex: 1 1 70%; }
+  .feature-heading > .chip { margin-left: 0; }
+  .feature-heading .text-link { margin-left: auto; }
+  .agent-callout, .demo-search { padding: 24px; }
+  .job-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 33%); }
+  .guide-step { --step-column: 90px; }
+  .step-badge { margin-left: 4px; }
+  .about-grid { grid-template-columns: 170px minmax(0, 1fr) minmax(148px, 26%); gap: 24px; }
+  .portrait { width: 170px; height: 200px; }
+  .previous-employers { padding-left: 20px; }
+  .company-logos img { height: 86px; }
+  .agent-picker button { padding-inline: 10px; gap: 8px; font-size: 14px; }
+  .agent-picker img, .agent-plus { width: 28px; height: 28px; }
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 170px minmax(0, 1fr); }
+  .previous-employers { grid-column: 1 / -1; border-left: 0; padding-left: 0; }
+  .company-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+  .agent-picker { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .job-hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 10px; }
+  .hero-phone { margin-top: 0; }
+  .hero-phone figcaption { position: static; }
+  .chat-phone { min-height: auto; font-size: 14px; }
+  .guide-step { --step-column: 74px; }
+  .token-form, .token-value { flex-wrap: wrap; }
+}
+
+@media (max-width: 600px) {
+  .wrap { width: calc(100% - 40px); }
+  .masthead { padding-block: 16px; }
+  .brand { gap: 8px; font-size: 17px; }
+  .brand img { width: 24px; height: 24px; }
+  .masthead nav { gap: 12px; font-size: 14px; }
+  .masthead nav img { width: 20px; height: 20px; }
+  .tagline { display: none; }
+  .home-hero { padding-block: 20px 28px; }
+  .home-hero h1 { line-height: .92; letter-spacing: -.04em; }
+  .labeled-section { padding: 22px 0 28px; }
+  .section-label { font-size: 13px; }
+  .help-grid, .demo, .topic-buttons, .listing-tiles, .pipeline-steps, .about-grid,
+  .token-grid, .query-examples, .query-examples dl, .flow-grid, .search-tips { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 20px; border-radius: 20px; }
+  .help-grid, .query-examples, .search-tips, .flow-grid, .token-grid { gap: 12px; }
+  .help-grid .card { min-height: 0; padding: 22px; }
+  .help-grid p { max-width: none; }
+  .help-grid h3 { font-size: 26px; }
+  .feature-heading { margin-bottom: 16px; gap: 10px 14px; }
+  .feature-heading img { width: 40px; height: 40px; }
+  .feature-intro { grid-template-columns: 40px minmax(0, 1fr); gap: 4px 12px; }
+  .feature-heading > div { flex: 1 1 calc(100% - 66px); }
+  .feature-heading h3 { font-size: 34px; }
+  .feature-heading p { font-size: 15px; }
+  .demo { padding: 0; border-radius: 22px; }
+  .demo-search { padding: 22px 18px; }
+  .demo-search h3 { font-size: 36px; line-height: 1; margin-bottom: 16px; }
+  .search-bar textarea { height: 2.8em; font-size: 14px; margin: 5px 8px 5px 10px; align-content: center; }
+  .search-bar .pill { padding: 12px 16px; font-size: 13px; }
+  .demo .job-row { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .demo .job-row:first-child { border-top: 0; }
+  .job-age { text-align: left; font-size: 12px; }
+  .job-meta { font-size: 13px; }
+  .agent-callout { padding: 22px 18px; margin: 0 10px 12px; border-radius: 16px; }
+  .agent-callout .pill { margin-bottom: 12px; }
+  .stats { padding-top: 16px; }
+  .stats strong { font-size: 36px; }
+  .stats small { font-size: 12px; }
+  .topic-buttons, .listing-tiles { gap: 10px; }
+  .topic-button, .listing-tile { border-radius: 20px; padding: 18px; }
+  .topic-button { gap: 14px; }
+  .topic-button .icon-tile { width: 44px; height: 44px; }
+  .topic-button strong { font-size: 20px; }
+  .topic-button > span:nth-child(2) > span { font-size: 14px; }
+  .disclosure-label { font-size: 12px; }
+  .pipeline-title { font-size: 28px; line-height: 1.05; }
+  .pipeline-summary { font-size: 15px; }
+  .listing-tile { grid-template-columns: minmax(80px, 110px) minmax(0, 1fr); padding: 16px; gap: 8px 16px; }
+  .listing-tile-copy strong { font-size: 19px; }
+  .listing-art { height: 100px; }
+  .comparison-arrow { transform: rotate(90deg); width: 38px; height: 38px; }
+  .side-project { grid-template-columns: 52px 1fr; gap: 8px 14px; padding: 16px 0; }
+  .side-project img { width: 52px; height: 52px; }
+  .side-project h3 { font-size: 24px; }
+  .side-project p { grid-column: 1 / -1; font-size: 14px; }
+  .about-grid { gap: 18px; }
+  .portrait { width: 160px; height: 190px; border-radius: 20px; }
+  .about-grid h3 { font-size: 26px; }
+  .about-grid p { font-size: 16px; }
+  .previous-employers { border: 0; padding: 0; margin-top: 6px; }
+  .company-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 16px; }
+  .company-logos img { height: 88px; }
+  .client-names { font-size: 16px; line-height: 1.7; }
+  .education div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .contact { flex-direction: column; align-items: flex-start; padding: 28px 22px; border-radius: 22px; margin-top: 10px; }
+  .contact h2 { font-size: 32px; }
+  footer.wrap { font-size: 12px; }
+  .job-hero { gap: 28px; padding: 24px 0 10px; }
+  .job-brand { gap: 10px; margin-bottom: 16px; }
+  .feature-intro .jobscout-mark, .job-brand .jobscout-mark { width: 40px; height: 40px; }
+  .job-brand strong { font-size: 22px; }
+  .job-hero h1 { font-size: clamp(39px, 13.33vw, 52px); line-height: 1.12; margin-bottom: 14px; }
+  .job-lead { font-size: 17px; }
+  .feature-pills { margin: 16px 0 18px; }
+  .feature-pills .chip { font-size: 12px; }
+  .hero-results { padding: 6px 16px 12px; }
+  .hero-results .job-row strong { font-size: 15px; }
+  .hero-results .job-meta { font-size: 12px; }
+  .hero-phone { width: min(100%, 340px); }
+  .chat-phone { border-width: 8px; border-radius: 38px; }
+  .guide-step { --step-column: 90px; padding-block: 18px 10px; }
+  .guide-toggle { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 8px 14px; padding-block: 18px; }
+  .step-badge { width: 44px; height: 44px; margin: 0; font-size: 17px; }
+  .guide-title { font-size: 21px; margin-bottom: 2px; }
+  .step-lead { font-size: 13px; }
+  .guide-open { margin: 0; font-size: 13px; padding: 6px 12px; }
+  .guide-content { margin: 18px 0 0; }
+  .step-next { width: 100%; }
+  .token-card h3 { margin-bottom: 32px; }
+  .token-form, .token-value { flex-direction: column; }
+  .token-grid .pill { width: 100%; }
+  .agent-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .agent-picker button { min-height: 56px; border-radius: 14px; font-size: 13px; }
+  .flow-frame { padding: 18px; }
+  #flow-grok .flow-frame:not(:first-child) > :nth-child(2) { margin-top: 14px; }
+  .query-examples h3 { font-size: 22px; }
+  .query-examples blockquote { font-size: 14px; }
+  .search-tips .card { padding: 18px; }
+  .search-tips h3 { font-size: 16px; }
+}
+
+</style>
+<style>
+.wx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
+.wx-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.wx-card .lbl{font-size:13px;color:var(--muted)}
+.wx-card .big{font-family:'Bricolage Grotesque',sans-serif;font-size:38px;line-height:1.05;margin:6px 0 2px;letter-spacing:-.02em}
+.wx-card .big small,.wx-small{font-size:15px;color:var(--muted);font-family:'Space Grotesk',sans-serif;letter-spacing:0}
+.wx-card .sub{font-size:14px;color:var(--muted)}
+.wx-sec{margin-top:44px}
+.wx-sec h2{font-family:'Bricolage Grotesque',sans-serif;font-size:28px;margin:6px 0 4px}
+.wx-note{color:var(--muted);font-size:14px;max-width:70ch;margin:6px 0 0}
+.wx-table{width:100%;border-collapse:collapse;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:14px}
+.wx-table th,.wx-table td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.wx-table th{color:var(--muted);font-weight:500;font-size:13px}
+.wx-table tr:last-child td{border-bottom:0}
+.wx-table td,.wx-table th{white-space:nowrap}
+.wx-table td.n,.wx-table th.n{text-align:right}
+.wx-scroll{overflow-x:auto}
+.wx-chart{width:100%;min-width:640px;height:auto;margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px}
+.wx-asof{color:var(--muted);font-size:14px;margin-top:8px}
+@media(max-width:640px){.wx-grid{grid-template-columns:1fr 1fr;gap:10px}.wx-card{padding:14px}.wx-card .big{font-size:28px}.wx-table{font-size:12.5px}.wx-table th,.wx-table td{padding:8px 5px}.wx-table th:first-child,.wx-table td:first-child{padding-left:10px}.wx-table th:last-child,.wx-table td:last-child{padding-right:10px}#avg-cards,#sol-cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body id="top">
+  <a class="visually-hidden skip" href="#main">Skip to content</a>
+  <header class="wrap masthead">
+    <div class="identity">
+      <a class="brand" href="https://noah-42.github.io/"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxODAgMTgwIj4KICA8cGF0aCBmaWxsPSIjNEIwMDgyIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zNyA4MWE1Mi41IDUyLjUgMCAxIDAgMTA1IDBhNTIuNSA1Mi41IDAgMSAwLTEwNSAwWk01OSA1NWExMCAxMCAwIDEgMCAyMCAwYTEwIDEwIDAgMSAwLTIwIDBaIi8+CiAgPHJlY3QgeD0iNjIiIHk9IjE0NiIgd2lkdGg9IjU1IiBoZWlnaHQ9IjEyIiByeD0iNiIgZmlsbD0iIzRCMDA4MiIvPgo8L3N2Zz4K" alt="" width="28" height="28">Noah Robinson</a>
+      <span class="tagline">AI builder in Berlin</span>
+    </div>
+    <nav aria-label="Main navigation"><a href="https://www.linkedin.com/in/noahrobinson" aria-label="LinkedIn"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzRCMDA4MiIgZD0iTTIwLjQ1IDJIMy41NUMyLjY5IDIgMiAyLjY4IDIgMy41MnYxNi45NkMyIDIxLjMyIDIuNjkgMjIgMy41NSAyMmgxNi45Yy44NiAwIDEuNTUtLjY4IDEuNTUtMS41MlYzLjUyQzIyIDIuNjggMjEuMzEgMiAyMC40NSAyWk03LjkzIDE4Ljc1SDQuOThWOS4yaDIuOTVaTTYuNDUgNy45YTEuNzEgMS43MSAwIDEgMSAwLTMuNDIgMS43MSAxLjcxIDAgMCAxIDAgMy40MlptMTIuMyAxMC44NUgxNS44di00LjY1YzAtMS4xMS0uMDItMi41NC0xLjU1LTIuNTQtMS41NSAwLTEuNzkgMS4yMS0xLjc5IDIuNDZ2NC43M0g5LjUxVjkuMmgyLjgzdjEuM2guMDRjLjQtLjc1IDEuMzYtMS41NSAyLjc5LTEuNTUgMi45OCAwIDMuNTggMS45NiAzLjU4IDQuNTFaIi8+PC9zdmc+Cg==" alt="" width="22" height="22"></a><a href="https://github.com/noah-42" aria-label="GitHub"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzRCMDA4MiIgZD0iTTEyIC44YTExLjIgMTEuMiAwIDAgMC0zLjU0IDIxLjgzYy41Ni4xLjc3LS4yNC43Ny0uNTR2LTIuMDhjLTMuMTMuNjgtMy43OS0xLjMzLTMuNzktMS4zMy0uNTEtMS4yOS0xLjI1LTEuNjMtMS4yNS0xLjYzLTEuMDItLjcuMDgtLjY5LjA4LS42OSAxLjEzLjA4IDEuNzMgMS4xNiAxLjczIDEuMTYgMSAxLjcyIDIuNjIgMS4yMiAzLjI2LjkzLjEtLjczLjM5LTEuMjIuNzEtMS41MS0yLjUtLjI4LTUuMTItMS4yNS01LjEyLTUuNTQgMC0xLjIyLjQzLTIuMjIgMS4xNS0zLS4xMi0uMjgtLjUtMS40Mi4xMS0yLjk2IDAgMCAuOTQtLjMgMy4wOCAxLjE1YTEwLjcgMTAuNyAwIDAgMSA1LjYxIDBjMi4xNC0xLjQ1IDMuMDgtMS4xNSAzLjA4LTEuMTUuNjEgMS41NC4yMyAyLjY4LjExIDIuOTYuNzIuNzggMS4xNSAxLjc4IDEuMTUgMyAwIDQuMy0yLjYzIDUuMjUtNS4xNCA1LjUzLjQuMzUuNzYgMS4wMy43NiAyLjA4djMuMDhjMCAuMy4yLjY1Ljc3LjU0QTExLjIgMTEuMiAwIDAgMCAxMiAuOFoiLz48L3N2Zz4K" alt="" width="22" height="22"></a></nav>
+  </header>
+  <main class="wrap" id="main">
+<section class="wx-sec" style="margin-top:28px">
+  <span class="chip">Berlin</span>
+  <h1 style="font-family:'Bricolage Grotesque',sans-serif;font-size:min(64px,11vw);line-height:1;margin:10px 0 6px;letter-spacing:-.03em">Berlin weather</h1>
+  <p class="wx-note">When it got cold last winter, when it stopped, and what the 5 and 10 year averages say. Sunrise, sunset and the next solstices are further down.</p>
+  <p class="wx-asof" id="asof">Weather data as of&nbsp;&hellip;</p>
+</section>
+
+<section class="wx-sec" id="last-winter">
+  <span class="section-label">Last winter</span>
+  <h2 id="ref-title">Winter 2025/26</h2>
+  <p class="wx-note">Freezing night = overnight minimum of 32&nbsp;&deg;F (0&nbsp;&deg;C) or below. The first and last freezing night are single days, not continuous cold, so the longest unbroken run is shown beside them. This is a fixed past winter, not a forecast.</p>
+  <div class="wx-grid" id="ref-cards"></div>
+  <div class="wx-scroll"><svg class="wx-chart" id="chart" viewBox="0 0 900 260" role="img" aria-label="Nightly minimum temperature in Fahrenheit on freezing nights, winter 2025/26"></svg></div>
+  <p class="wx-note">Chart: overnight minimum (&deg;F) on freezing nights only. Dashed line is 32&nbsp;&deg;F.</p>
+</section>
+
+<section class="wx-sec" id="averages">
+  <span class="section-label">Averages</span>
+  <h2>First and last freezing night, 5 and 10 seasons</h2>
+  <p class="wx-note">Averages are the mean day of the season (counted from 1 Sep), not the mean calendar date. 2026/27 is in progress and is not included.</p>
+  <div class="wx-grid" id="avg-cards"></div>
+  <div class="wx-scroll"><table class="wx-table" id="season-table"></table></div>
+</section>
+
+<section class="wx-sec" id="today">
+  <span class="section-label">Daylight</span>
+  <h2>Today in Berlin</h2>
+  <p class="wx-note" id="today-note">Calculated in your browser, shown in Berlin time.</p>
+  <div class="wx-grid" id="today-cards"></div>
+</section>
+
+<section class="wx-sec" id="solstices">
+  <span class="section-label">Turning points</span>
+  <h2>Next shortest and longest day</h2>
+  <div class="wx-grid" id="sol-cards"></div>
+</section>
+
+<section class="wx-sec" id="sources">
+  <span class="section-label">Sources</span>
+  <p class="wx-note">Weather values are ERA5 reanalysis for one grid point near Berlin (52.52&deg;N, 13.41&deg;E) via <a class="text-link" href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo</a>, not station readings. Solstice moments are from the <a class="text-link" href="https://aa.usno.navy.mil/data/Earth_Seasons">US Naval Observatory</a>. Sunrise and sunset use the <a class="text-link" href="https://gml.noaa.gov/grad/solcalc/calcdetails.html">NOAA solar equations</a> and can be a minute or so off.</p>
+</section>
+</main>
+<footer class="wrap"><span>&copy; 2026 Noah Robinson</span><a href="#top">Back to top &uarr;</a></footer>
+<script type="application/json" id="wx-data">{"location":"Berlin 52.52N 13.41E","freezing_definition":"night minimum at or below 0 C (32 F); ERA5 reanalysis via Open-Meteo archive, Sep-Aug seasons, complete seasons only. One row per freezing night; days above freezing are not in this dataset, 2026/27 included through 2026-11-13.","freezing_seasons":[{"season":"2016/17","first":"2016-11-08","last":"2017-05-09","freezing_days":83,"all_day_freeze_days":15,"longest_run_days":23,"longest_run_start":"2017-01-13","longest_run_end":"2017-02-04","coldest_c":-11.1,"coldest_f":12.0},{"season":"2017/18","first":"2017-11-14","last":"2018-04-02","freezing_days":81,"all_day_freeze_days":11,"longest_run_days":38,"longest_run_start":"2018-02-01","longest_run_end":"2018-03-10","coldest_c":-12.4,"coldest_f":9.7},{"season":"2018/19","first":"2018-11-17","last":"2019-04-01","freezing_days":53,"all_day_freeze_days":5,"longest_run_days":10,"longest_run_start":"2019-01-29","longest_run_end":"2019-02-07","coldest_c":-7.2,"coldest_f":19.0},{"season":"2019/20","first":"2019-10-30","last":"2020-04-01","freezing_days":40,"all_day_freeze_days":0,"longest_run_days":7,"longest_run_start":"2020-01-20","longest_run_end":"2020-01-26","coldest_c":-4.7,"coldest_f":23.5},{"season":"2020/21","first":"2020-11-20","last":"2021-04-27","freezing_days":80,"all_day_freeze_days":14,"longest_run_days":13,"longest_run_start":"2021-02-04","longest_run_end":"2021-02-16","coldest_c":-15.0,"coldest_f":5.0},{"season":"2021/22","first":"2021-11-22","last":"2022-04-17","freezing_days":68,"all_day_freeze_days":6,"longest_run_days":16,"longest_run_start":"2022-02-26","longest_run_end":"2022-03-13","coldest_c":-11.0,"coldest_f":12.2},{"season":"2022/23","first":"2022-11-18","last":"2023-04-12","freezing_days":73,"all_day_freeze_days":9,"longest_run_days":13,"longest_run_start":"2022-12-07","longest_run_end":"2022-12-19","coldest_c":-10.5,"coldest_f":13.1},{"season":"2023/24","first":"2023-11-21","last":"2024-04-23","freezing_days":50,"all_day_freeze_days":12,"longest_run_days":14,"longest_run_start":"2023-11-25","longest_run_end":"2023-12-08","coldest_c":-10.6,"coldest_f":12.9},{"season":"2024/25","first":"2024-11-03","last":"2025-03-20","freezing_days":56,"all_day_freeze_days":7,"longest_run_days":15,"longest_run_start":"2025-02-07","longest_run_end":"2025-02-21","coldest_c":-13.3,"coldest_f":8.1},{"season":"2025/26","first":"2025-11-20","last":"2026-04-11","freezing_days":75,"all_day_freeze_days":26,"longest_run_days":36,"longest_run_start":"2026-01-02","longest_run_end":"2026-02-06","coldest_c":-12.9,"coldest_f":8.8}],"solstices":[{"kind":"winter","utc":"2016-12-21T10:44Z","berlin_local":"2016-12-21 11:44 CET","berlin_date":"2016-12-21","sunrise":"08:15","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2017-06-21T04:24Z","berlin_local":"2017-06-21 06:24 CEST","berlin_date":"2017-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2017-12-21T16:28Z","berlin_local":"2017-12-21 17:28 CET","berlin_date":"2017-12-21","sunrise":"08:14","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2018-06-21T10:07Z","berlin_local":"2018-06-21 12:07 CEST","berlin_date":"2018-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2018-12-21T22:23Z","berlin_local":"2018-12-21 23:23 CET","berlin_date":"2018-12-21","sunrise":"08:14","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2019-06-21T15:54Z","berlin_local":"2019-06-21 17:54 CEST","berlin_date":"2019-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2019-12-22T04:19Z","berlin_local":"2019-12-22 05:19 CET","berlin_date":"2019-12-22","sunrise":"08:15","sunset":"15:54","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2020-06-20T21:44Z","berlin_local":"2020-06-20 23:44 CEST","berlin_date":"2020-06-20","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2020-12-21T10:02Z","berlin_local":"2020-12-21 11:02 CET","berlin_date":"2020-12-21","sunrise":"08:15","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2021-06-21T03:32Z","berlin_local":"2021-06-21 05:32 CEST","berlin_date":"2021-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2021-12-21T15:59Z","berlin_local":"2021-12-21 16:59 CET","berlin_date":"2021-12-21","sunrise":"08:14","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2022-06-21T09:14Z","berlin_local":"2022-06-21 11:14 CEST","berlin_date":"2022-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2022-12-21T21:48Z","berlin_local":"2022-12-21 22:48 CET","berlin_date":"2022-12-21","sunrise":"08:14","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2023-06-21T14:58Z","berlin_local":"2023-06-21 16:58 CEST","berlin_date":"2023-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2023-12-22T03:27Z","berlin_local":"2023-12-22 04:27 CET","berlin_date":"2023-12-22","sunrise":"08:15","sunset":"15:54","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2024-06-20T20:51Z","berlin_local":"2024-06-20 22:51 CEST","berlin_date":"2024-06-20","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2024-12-21T09:20Z","berlin_local":"2024-12-21 10:20 CET","berlin_date":"2024-12-21","sunrise":"08:15","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2025-06-21T02:42Z","berlin_local":"2025-06-21 04:42 CEST","berlin_date":"2025-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2025-12-21T15:03Z","berlin_local":"2025-12-21 16:03 CET","berlin_date":"2025-12-21","sunrise":"08:15","sunset":"15:53","daylight":"7h 38m","sun_times_source":"open-meteo-archive"},{"kind":"summer","utc":"2026-06-21T08:24Z","berlin_local":"2026-06-21 10:24 CEST","berlin_date":"2026-06-21","sunrise":"04:42","sunset":"21:33","daylight":"16h 50m","sun_times_source":"open-meteo-archive"},{"kind":"winter","utc":"2026-12-21T20:50Z","berlin_local":"2026-12-21 21:50 CET","berlin_date":"2026-12-21","sunrise":"08:14","sunset":"15:53","daylight":"7h 39m","sun_times_source":"noaa-calculation"},{"kind":"summer","utc":"2027-06-21T14:11Z","berlin_local":"2027-06-21 16:11 CEST","berlin_date":"2027-06-21","sunrise":"04:42","sunset":"21:32","daylight":"16h 50m","sun_times_source":"noaa-calculation"},{"kind":"winter","utc":"2027-12-22T02:42Z","berlin_local":"2027-12-22 03:42 CET","berlin_date":"2027-12-22"},{"kind":"summer","utc":"2028-06-20T20:02Z","berlin_local":"2028-06-20 22:02 CEST","berlin_date":"2028-06-20"},{"kind":"winter","utc":"2028-12-21T08:19Z","berlin_local":"2028-12-21 09:19 CET","berlin_date":"2028-12-21"},{"kind":"summer","utc":"2029-06-21T01:48Z","berlin_local":"2029-06-21 03:48 CEST","berlin_date":"2029-06-21"},{"kind":"winter","utc":"2029-12-21T14:14Z","berlin_local":"2029-12-21 15:14 CET","berlin_date":"2029-12-21"},{"kind":"summer","utc":"2030-06-21T07:31Z","berlin_local":"2030-06-21 09:31 CEST","berlin_date":"2030-06-21"},{"kind":"winter","utc":"2030-12-21T20:09Z","berlin_local":"2030-12-21 21:09 CET","berlin_date":"2030-12-21"},{"kind":"summer","utc":"2031-06-21T13:17Z","berlin_local":"2031-06-21 15:17 CEST","berlin_date":"2031-06-21"},{"kind":"winter","utc":"2031-12-22T01:55Z","berlin_local":"2031-12-22 02:55 CET","berlin_date":"2031-12-22"},{"kind":"summer","utc":"2032-06-20T19:09Z","berlin_local":"2032-06-20 21:09 CEST","berlin_date":"2032-06-20"},{"kind":"winter","utc":"2032-12-21T07:56Z","berlin_local":"2032-12-21 08:56 CET","berlin_date":"2032-12-21"},{"kind":"summer","utc":"2033-06-21T01:01Z","berlin_local":"2033-06-21 03:01 CEST","berlin_date":"2033-06-21"},{"kind":"winter","utc":"2033-12-21T13:46Z","berlin_local":"2033-12-21 14:46 CET","berlin_date":"2033-12-21"},{"kind":"summer","utc":"2034-06-21T06:44Z","berlin_local":"2034-06-21 08:44 CEST","berlin_date":"2034-06-21"},{"kind":"winter","utc":"2034-12-21T19:34Z","berlin_local":"2034-12-21 20:34 CET","berlin_date":"2034-12-21"},{"kind":"summer","utc":"2035-06-21T12:33Z","berlin_local":"2035-06-21 14:33 CEST","berlin_date":"2035-06-21"},{"kind":"winter","utc":"2035-12-22T01:31Z","berlin_local":"2035-12-22 02:31 CET","berlin_date":"2035-12-22"}],"sources":{"solstice_moments":"https://aa.usno.navy.mil/api/seasons","weather":"https://open-meteo.com/en/docs/historical-weather-api","sun_formula":"https://gml.noaa.gov/grad/solcalc/calcdetails.html"},"dataset_as_of":"2026-11-14","dataset_coverage":"freezing seasons 2016/17 to 2025/26 (10 complete Sep-Aug seasons; 2026/27 in progress, excluded); solstices Dec 2016 to Dec 2035","freezing_days_daily_columns":["date","night_min_c","day_max_c","night_min_f","day_max_f"],"freezing_days_daily":[["2016-11-08",-0.1,5.1,31.8,41.2],["2016-11-09",-0.4,4.0,31.3,39.2],["2016-11-10",-0.4,3.5,31.3,38.3],["2016-11-12",-3.8,0.6,25.2,33.1],["2016-11-13",-3.8,-0.7,25.2,30.7],["2016-11-14",-3.8,3.4,25.2,38.1],["2016-11-25",-1.1,2.7,30.0,36.9],["2016-11-26",-0.1,3.0,31.8,37.4],["2016-11-28",-4.0,2.6,24.8,36.7],["2016-11-29",-4.2,1.2,24.4,34.2],["2016-11-30",-2.9,4.0,26.8,39.2],["2016-12-02",-1.2,7.4,29.8,45.3],["2016-12-03",-3.6,2.0,25.5,35.6],["2016-12-04",-3.2,2.3,26.2,36.1],["2016-12-05",-4.0,-0.1,24.8,31.8],["2016-12-06",-2.5,2.1,27.5,35.8],["2016-12-07",-0.7,3.6,30.7,38.5],["2016-12-12",-2.5,6.1,27.5,43.0],["2016-12-13",-2.0,4.2,28.4,39.6],["2016-12-14",-1.2,4.9,29.8,40.8],["2016-12-15",-1.9,2.2,28.6,36.0],["2016-12-16",-3.0,2.4,26.6,36.3],["2016-12-17",-3.7,1.1,25.3,34.0],["2016-12-20",-1.0,1.7,30.2,35.1],["2016-12-21",-2.3,2.3,27.9,36.1],["2016-12-22",-1.5,2.2,29.3,36.0],["2016-12-29",-1.4,5.1,29.5,41.2],["2016-12-30",-3.0,3.1,26.6,37.6],["2016-12-31",-2.4,2.6,27.7,36.7],["2017-01-02",-2.3,3.0,27.9,37.4],["2017-01-03",-1.3,3.7,29.7,38.7],["2017-01-04",-1.9,4.2,28.6,39.6],["2017-01-05",-7.1,-1.5,19.2,29.3],["2017-01-06",-9.0,-3.4,15.8,25.9],["2017-01-07",-9.0,-2.0,15.8,28.4],["2017-01-08",-5.1,-1.3,22.8,29.7],["2017-01-09",-4.7,-0.1,23.5,31.8],["2017-01-10",-5.9,0.6,21.4,33.1],["2017-01-11",-6.6,3.0,20.1,37.4],["2017-01-13",-2.4,2.7,27.7,36.9],["2017-01-14",-3.2,1.6,26.2,34.9],["2017-01-15",-2.6,1.2,27.3,34.2],["2017-01-16",-10.3,-0.8,13.5,30.6],["2017-01-17",-11.1,-1.0,12.0,30.2],["2017-01-18",-7.3,-2.7,18.9,27.1],["2017-01-19",-4.0,-1.8,24.8,28.8],["2017-01-20",-1.8,1.5,28.8,34.7],["2017-01-21",-1.4,2.0,29.5,35.6],["2017-01-22",-4.6,2.1,23.7,35.8],["2017-01-23",-7.0,-1.9,19.4,28.6],["2017-01-24",-2.6,1.0,27.3,33.8],["2017-01-25",-1.6,1.6,29.1,34.9],["2017-01-26",-2.8,2.5,27.0,36.5],["2017-01-27",-5.1,3.1,22.8,37.6],["2017-01-28",-5.2,0.2,22.6,32.4],["2017-01-29",-3.7,6.4,25.3,43.5],["2017-01-30",-1.9,2.8,28.6,37.0],["2017-01-31",-4.4,0.8,24.1,33.4],["2017-02-01",-5.0,0.6,23.0,33.1],["2017-02-02",-5.1,1.1,22.8,34.0],["2017-02-03",-2.4,3.6,27.7,38.5],["2017-02-04",-1.3,7.8,29.7,46.0],["2017-02-06",-2.7,0.8,27.1,33.4],["2017-02-07",-3.1,-0.4,26.4,31.3],["2017-02-08",-6.1,-2.4,21.0,27.7],["2017-02-09",-5.7,-1.7,21.7,28.9],["2017-02-10",-5.9,1.0,21.4,33.8],["2017-02-11",-3.2,0.1,26.2,32.2],["2017-02-12",-5.1,0.9,22.8,33.6],["2017-02-13",-6.4,1.7,20.5,35.1],["2017-02-14",-6.1,4.0,21.0,39.2],["2017-02-15",-4.7,9.4,23.5,48.9],["2017-02-16",-2.1,10.9,28.2,51.6],["2017-02-24",-0.2,6.7,31.6,44.1],["2017-02-25",-0.9,6.0,30.4,42.8],["2017-03-12",-1.0,5.4,30.2,41.7],["2017-03-13",-1.1,8.5,30.0,47.3],["2017-03-19",-0.8,9.9,30.6,49.8],["2017-03-26",-0.3,12.0,31.5,53.6],["2017-04-19",-1.5,6.1,29.3,43.0],["2017-04-20",-2.4,8.2,27.7,46.8],["2017-04-27",-0.7,11.0,30.7,51.8],["2017-05-09",0.0,9.4,32.0,48.9],["2017-11-14",-0.5,6.5,31.1,43.7],["2017-11-29",-0.8,5.0,30.6,41.0],["2017-11-30",-1.9,3.2,28.6,37.8],["2017-12-01",-0.6,3.3,30.9,37.9],["2017-12-02",-0.6,3.2,30.9,37.8],["2017-12-03",-1.0,3.1,30.2,37.6],["2017-12-09",-0.2,2.7,31.6,36.9],["2017-12-10",-1.0,1.7,30.2,35.1],["2017-12-13",-0.8,3.5,30.6,38.3],["2017-12-15",-0.9,1.7,30.4,35.1],["2017-12-16",-0.5,2.5,31.1,36.5],["2017-12-17",-1.4,1.9,29.5,35.4],["2017-12-18",-3.5,2.4,25.7,36.3],["2017-12-19",-1.3,2.8,29.7,37.0],["2017-12-20",-0.2,4.2,31.6,39.6],["2017-12-28",-0.3,3.9,31.5,39.0],["2017-12-29",-1.9,4.0,28.6,39.2],["2017-12-30",-1.6,8.7,29.1,47.7],["2018-01-07",-3.2,3.7,26.2,38.7],["2018-01-08",-4.7,1.3,23.5,34.3],["2018-01-09",-2.7,4.8,27.1,40.6],["2018-01-10",-0.9,5.4,30.4,41.7],["2018-01-11",-0.5,2.5,31.1,36.5],["2018-01-13",-2.1,0.6,28.2,33.1],["2018-01-14",-4.4,-0.5,24.1,31.1],["2018-01-15",-4.4,2.9,24.1,37.2],["2018-01-17",-1.1,2.0,30.0,35.6],["2018-01-18",0.0,4.9,32.0,40.8],["2018-01-20",-3.0,2.6,26.6,36.7],["2018-01-21",-3.0,1.9,26.6,35.4],["2018-01-22",-1.5,1.8,29.3,35.2],["2018-01-23",-3.9,4.4,25.0,39.9],["2018-02-01",-0.3,6.3,31.5,43.3],["2018-02-02",-1.0,4.9,30.2,40.8],["2018-02-03",-2.3,2.5,27.9,36.5],["2018-02-04",-4.8,1.9,23.4,35.4],["2018-02-05",-6.1,1.1,21.0,34.0],["2018-02-06",-7.2,-0.2,19.0,31.6],["2018-02-07",-6.0,1.3,21.2,34.3],["2018-02-08",-7.5,0.8,18.5,33.4],["2018-02-09",-6.9,1.7,19.6,35.1],["2018-02-10",-3.8,2.5,25.2,36.5],["2018-02-11",-0.7,4.3,30.7,39.7],["2018-02-12",-2.1,4.2,28.2,39.6],["2018-02-13",-3.0,4.3,26.6,39.7],["2018-02-14",-5.3,3.8,22.5,38.8],["2018-02-15",-4.5,3.1,23.9,37.6],["2018-02-16",-0.7,6.4,30.7,43.5],["2018-02-17",-1.5,4.6,29.3,40.3],["2018-02-18",-2.5,3.3,27.5,37.9],["2018-02-19",-1.4,4.2,29.5,39.6],["2018-02-20",-2.5,3.5,27.5,38.3],["2018-02-21",-3.5,3.9,25.7,39.0],["2018-02-22",-3.2,2.0,26.2,35.6],["2018-02-23",-6.3,-0.7,20.7,30.7],["2018-02-24",-6.9,0.1,19.6,32.2],["2018-02-25",-8.2,-1.5,17.2,29.3],["2018-02-26",-9.4,-2.9,15.1,26.8],["2018-02-27",-12.2,-4.0,10.0,24.8],["2018-02-28",-11.8,-5.7,10.8,21.7],["2018-03-01",-11.6,-5.0,11.1,23.0],["2018-03-02",-12.4,-3.4,9.7,25.9],["2018-03-03",-11.5,-2.4,11.3,27.7],["2018-03-04",-9.3,3.5,15.3,38.3],["2018-03-05",-3.2,9.2,26.2,48.6],["2018-03-06",-3.2,5.2,26.2,41.4],["2018-03-07",-0.7,3.5,30.7,38.3],["2018-03-08",-2.5,8.1,27.5,46.6],["2018-03-09",-1.4,8.6,29.5,47.5],["2018-03-10",-1.5,8.1,29.3,46.6],["2018-03-16",-3.2,2.0,26.2,35.6],["2018-03-17",-5.1,-0.5,22.8,31.1],["2018-03-18",-6.0,0.7,21.2,33.3],["2018-03-19",-6.1,3.8,21.0,38.8],["2018-03-20",-6.1,3.6,21.0,38.5],["2018-03-21",-5.6,6.1,21.9,43.0],["2018-03-22",-0.6,3.4,30.9,38.1],["2018-03-25",-1.2,9.9,29.8,49.8],["2018-03-26",-0.4,8.3,31.3,46.9],["2018-03-30",-2.0,9.6,28.4,49.3],["2018-04-02",-1.4,7.8,29.5,46.0],["2018-11-17",-1.4,5.8,29.5,42.4],["2018-11-18",-4.1,4.8,24.6,40.6],["2018-11-24",-1.9,5.1,28.6,41.2],["2018-11-26",-0.5,4.1,31.1,39.4],["2018-11-27",-3.6,1.7,25.5,35.1],["2018-11-28",-2.5,2.7,27.5,36.9],["2018-11-29",-2.0,2.3,28.4,36.1],["2018-11-30",-0.2,1.9,31.6,35.4],["2018-12-05",-0.5,5.9,31.1,42.6],["2018-12-06",-0.3,9.2,31.5,48.6],["2018-12-12",-0.4,3.8,31.3,38.8],["2018-12-14",-2.5,0.5,27.5,32.9],["2018-12-15",-2.0,0.7,28.4,33.3],["2018-12-16",-2.3,0.4,27.9,32.7],["2018-12-17",-2.3,1.7,27.9,35.1],["2018-12-19",-0.1,3.1,31.8,37.6],["2019-01-02",-2.2,3.5,28.0,38.3],["2019-01-03",-3.1,2.1,26.4,35.8],["2019-01-04",-2.7,5.0,27.1,41.0],["2019-01-06",-0.6,2.9,30.9,37.2],["2019-01-10",-0.9,2.3,30.4,36.1],["2019-01-11",-0.9,5.3,30.4,41.5],["2019-01-14",-0.3,5.2,31.5,41.4],["2019-01-18",-1.4,1.7,29.5,35.1],["2019-01-19",-2.7,2.3,27.1,36.1],["2019-01-20",-6.1,1.1,21.0,34.0],["2019-01-21",-4.4,-1.3,24.1,29.7],["2019-01-22",-5.7,-0.2,21.7,31.6],["2019-01-23",-7.2,-2.2,19.0,28.0],["2019-01-24",-4.6,-3.1,23.7,26.4],["2019-01-25",-4.6,-2.6,23.7,27.3],["2019-01-26",-3.6,3.3,25.5,37.9],["2019-01-29",-3.8,2.8,25.2,37.0],["2019-01-30",-3.8,2.8,25.2,37.0],["2019-01-31",-1.5,3.4,29.3,38.1],["2019-02-01",-3.6,1.7,25.5,35.1],["2019-02-02",-0.3,1.8,31.5,35.2],["2019-02-03",-1.3,2.0,29.7,35.6],["2019-02-04",-2.1,4.7,28.2,40.5],["2019-02-05",-0.5,4.3,31.1,39.7],["2019-02-06",-0.2,6.3,31.6,43.3],["2019-02-07",-1.2,6.2,29.8,43.2],["2019-02-12",-0.1,5.4,31.8,41.7],["2019-02-15",-2.2,11.3,28.0,52.3],["2019-02-17",-1.3,12.1,29.7,53.8],["2019-02-18",-0.8,13.1,30.6,55.6],["2019-02-22",-3.7,8.3,25.3,46.9],["2019-02-23",-4.8,4.1,23.4,39.4],["2019-02-24",-3.4,10.0,25.9,50.0],["2019-02-25",-1.6,12.4,29.1,54.3],["2019-03-19",-0.7,8.2,30.7,46.8],["2019-03-20",-2.0,11.6,28.4,52.9],["2019-04-01",-1.6,10.0,29.1,50.0],["2019-10-30",-1.1,8.1,30.0,46.6],["2019-10-31",-3.0,6.3,26.6,43.3],["2019-11-01",-2.3,6.4,27.9,43.5],["2019-11-11",0.0,6.8,32.0,44.2],["2019-11-17",-1.0,9.9,30.2,49.8],["2019-11-30",-1.9,5.1,28.6,41.2],["2019-12-01",-1.2,3.3,29.8,37.9],["2019-12-03",-1.5,5.0,29.3,41.0],["2019-12-04",-0.8,6.6,30.6,43.9],["2019-12-05",-1.4,4.4,29.5,39.9],["2019-12-06",-1.2,5.3,29.8,41.5],["2019-12-13",-0.7,2.9,30.7,37.2],["2019-12-28",-2.7,2.1,27.1,35.8],["2019-12-29",-3.7,1.4,25.3,34.5],["2020-01-01",-3.0,4.0,26.6,39.2],["2020-01-02",-3.8,5.3,25.2,41.5],["2020-01-03",-0.7,6.4,30.7,43.5],["2020-01-05",-1.9,3.7,28.6,38.7],["2020-01-07",-1.4,5.1,29.5,41.2],["2020-01-20",-1.3,3.5,29.7,38.3],["2020-01-21",-0.2,5.3,31.6,41.5],["2020-01-22",-1.0,5.8,30.2,42.4],["2020-01-23",-0.8,5.3,30.6,41.5],["2020-01-24",-2.4,3.3,27.7,37.9],["2020-01-25",-0.7,2.5,30.7,36.5],["2020-01-26",-1.3,2.2,29.7,36.0],["2020-02-28",-0.2,7.2,31.6,45.0],["2020-03-05",-1.2,10.0,29.8,50.0],["2020-03-14",-2.5,6.7,27.5,44.1],["2020-03-15",-0.4,11.3,31.3,52.3],["2020-03-21",-0.7,5.8,30.7,42.4],["2020-03-22",-3.0,4.9,26.6,40.8],["2020-03-23",-4.7,4.8,23.5,40.6],["2020-03-24",-4.6,6.4,23.7,43.5],["2020-03-25",-2.9,8.0,26.8,46.4],["2020-03-26",-1.6,9.8,29.1,49.6],["2020-03-29",-3.9,5.1,25.0,41.2],["2020-03-30",-4.1,3.1,24.6,37.6],["2020-03-31",-2.8,3.8,27.0,38.8],["2020-04-01",-2.1,8.5,28.2,47.3],["2020-11-20",-0.2,5.8,31.6,42.4],["2020-11-21",-0.2,6.3,31.6,43.3],["2020-11-25",-0.4,4.1,31.3,39.4],["2020-11-28",-0.7,5.4,30.7,41.7],["2020-11-29",-0.1,5.0,31.8,41.0],["2020-11-30",-0.6,3.0,30.9,37.4],["2020-12-01",-0.7,4.0,30.7,39.2],["2020-12-02",-3.1,2.0,26.4,35.6],["2020-12-03",-3.5,0.4,25.7,32.7],["2020-12-04",-2.0,3.9,28.4,39.0],["2020-12-10",-1.0,0.7,30.2,33.3],["2020-12-11",-1.0,1.3,30.2,34.3],["2020-12-26",-1.8,2.1,28.8,35.8],["2020-12-29",0.0,3.9,32.0,39.0],["2020-12-30",-0.5,4.6,31.1,40.3],["2021-01-01",-0.8,2.1,30.6,35.8],["2021-01-02",-1.1,2.6,30.0,36.7],["2021-01-03",-1.1,0.8,30.0,33.4],["2021-01-04",-0.4,1.2,31.3,34.2],["2021-01-08",-1.5,1.5,29.3,34.7],["2021-01-09",-0.3,2.4,31.5,36.3],["2021-01-10",-0.7,1.5,30.7,34.7],["2021-01-11",-0.4,2.0,31.3,35.6],["2021-01-12",-0.1,2.2,31.8,36.0],["2021-01-13",-0.4,3.0,31.3,37.4],["2021-01-14",-0.5,2.6,31.1,36.7],["2021-01-15",-3.7,0.4,25.3,32.7],["2021-01-16",-3.7,-1.1,25.3,30.0],["2021-01-17",-4.8,-0.5,23.4,31.1],["2021-01-18",-4.6,2.1,23.7,35.8],["2021-01-22",-1.3,10.2,29.7,50.4],["2021-01-23",-1.2,2.3,29.8,36.1],["2021-01-24",-0.6,1.4,30.9,34.5],["2021-01-25",-0.3,2.4,31.5,36.3],["2021-01-26",-2.5,2.5,27.5,36.5],["2021-01-27",-0.8,3.8,30.6,38.8],["2021-01-28",-3.1,3.5,26.4,38.3],["2021-01-29",-5.2,-0.5,22.6,31.1],["2021-01-30",-4.0,1.3,24.8,34.3],["2021-01-31",-11.6,-0.6,11.1,30.9],["2021-02-01",-11.6,0.6,11.1,33.1],["2021-02-02",-1.5,1.4,29.3,34.5],["2021-02-04",-0.1,6.8,31.8,44.2],["2021-02-05",-1.2,0.8,29.8,33.4],["2021-02-06",-4.5,-0.2,23.9,31.6],["2021-02-07",-7.3,-4.5,18.9,23.9],["2021-02-08",-10.8,-7.2,12.6,19.0],["2021-02-09",-14.3,-7.1,6.3,19.2],["2021-02-10",-15.0,-5.8,5.0,21.6],["2021-02-11",-11.9,-3.3,10.6,26.1],["2021-02-12",-14.6,-3.3,5.7,26.1],["2021-02-13",-13.8,-1.2,7.2,29.8],["2021-02-14",-14.6,-4.2,5.7,24.4],["2021-02-15",-14.8,-0.7,5.4,30.7],["2021-02-16",-2.6,2.3,27.3,36.1],["2021-02-19",-1.3,9.3,29.7,48.7],["2021-02-20",-1.1,12.3,30.0,54.1],["2021-03-01",-0.2,7.4,31.6,45.3],["2021-03-02",-3.0,10.7,26.6,51.3],["2021-03-03",-2.8,13.4,27.0,56.1],["2021-03-05",-3.5,5.5,25.7,41.9],["2021-03-06",-3.5,3.6,25.7,38.5],["2021-03-08",-4.1,5.2,24.6,41.4],["2021-03-09",-4.6,5.6,23.7,42.1],["2021-03-10",-4.6,7.3,23.7,45.1],["2021-03-16",-1.0,6.9,30.2,44.4],["2021-03-17",-2.5,5.3,27.5,41.5],["2021-03-18",-3.3,6.7,26.1,44.1],["2021-03-19",-3.9,4.1,25.0,39.4],["2021-03-20",-4.1,3.3,24.6,37.9],["2021-03-22",-0.5,9.4,31.1,48.9],["2021-04-03",-0.4,8.9,31.3,48.0],["2021-04-04",-2.4,9.6,27.7,49.3],["2021-04-06",-1.6,5.9,29.1,42.6],["2021-04-07",-0.1,6.3,31.8,43.3],["2021-04-13",-0.7,8.6,30.7,47.5],["2021-04-14",-0.3,7.8,31.5,46.0],["2021-04-25",-0.4,9.8,31.3,49.6],["2021-04-26",-2.3,9.1,27.9,48.4],["2021-04-27",-1.9,11.8,28.6,53.2],["2021-11-22",-0.6,5.7,30.9,42.3],["2021-11-27",-0.7,3.2,30.7,37.8],["2021-11-28",-2.4,3.2,27.7,37.8],["2021-11-29",-2.3,3.0,27.9,37.4],["2021-12-02",-2.7,5.9,27.1,42.6],["2021-12-03",-2.7,3.0,27.1,37.4],["2021-12-06",-2.6,2.2,27.3,36.0],["2021-12-07",-2.5,1.0,27.5,33.8],["2021-12-08",-2.1,0.5,28.2,32.9],["2021-12-09",-2.5,-0.7,27.5,30.7],["2021-12-10",-5.6,0.3,21.9,32.5],["2021-12-11",-5.0,0.4,23.0,32.7],["2021-12-12",-1.2,3.0,29.8,37.4],["2021-12-20",-4.1,3.8,24.6,38.8],["2021-12-21",-3.9,0.5,25.0,32.9],["2021-12-22",-3.8,-0.2,25.2,31.6],["2021-12-23",-3.8,1.3,25.2,34.3],["2021-12-24",-5.9,3.5,21.4,38.3],["2021-12-25",-8.1,-2.9,17.4,26.8],["2021-12-26",-11.0,-3.5,12.2,25.7],["2021-12-27",-7.3,-0.5,18.9,31.1],["2021-12-28",-3.9,2.0,25.0,35.6],["2021-12-29",-0.1,3.7,31.8,38.7],["2022-01-06",-3.0,2.9,26.6,37.2],["2022-01-07",-1.9,2.5,28.6,36.5],["2022-01-08",-1.7,2.8,28.9,37.0],["2022-01-09",-1.7,3.1,28.9,37.6],["2022-01-10",-2.3,4.2,27.9,39.6],["2022-01-11",-4.9,-0.6,23.2,30.9],["2022-01-12",-2.6,2.3,27.3,36.1],["2022-01-15",-1.7,2.9,28.9,37.2],["2022-01-16",-1.7,4.3,28.9,39.7],["2022-01-17",-1.4,5.8,29.5,42.4],["2022-01-18",-1.4,5.6,29.5,42.1],["2022-01-20",-1.8,4.5,28.8,40.1],["2022-01-21",-3.5,2.8,25.7,37.0],["2022-01-31",-1.5,3.4,29.3,38.1],["2022-02-01",-0.8,5.7,30.6,42.3],["2022-02-03",0.0,6.3,32.0,43.3],["2022-02-11",-1.5,5.5,29.3,41.9],["2022-02-12",-3.4,4.8,25.9,40.6],["2022-02-13",-1.2,7.4,29.8,45.3],["2022-02-26",-0.9,6.6,30.4,43.9],["2022-02-27",-3.0,6.0,26.6,42.8],["2022-02-28",-2.9,4.9,26.8,40.8],["2022-03-01",-3.5,6.7,25.7,44.1],["2022-03-02",-3.8,6.5,25.2,43.7],["2022-03-03",-5.1,3.0,22.8,37.4],["2022-03-04",-2.6,4.4,27.3,39.9],["2022-03-05",-4.6,4.4,23.7,39.9],["2022-03-06",-4.6,2.2,23.7,36.0],["2022-03-07",-2.8,7.9,27.0,46.2],["2022-03-08",-3.8,8.5,25.2,47.3],["2022-03-09",-3.5,10.3,25.7,50.5],["2022-03-10",-2.0,7.7,28.4,45.9],["2022-03-11",-2.9,6.8,26.8,44.2],["2022-03-12",-1.5,9.6,29.3,49.3],["2022-03-13",-1.2,11.1,29.8,52.0],["2022-03-22",-0.5,15.4,31.1,59.7],["2022-03-23",-0.5,16.9,31.1,62.4],["2022-03-24",-1.9,14.7,28.6,58.5],["2022-03-25",-1.1,15.9,30.0,60.6],["2022-03-31",-1.3,6.5,29.7,43.7],["2022-04-01",-0.3,7.0,31.5,44.6],["2022-04-02",-2.8,5.0,27.0,41.0],["2022-04-03",-3.5,6.9,25.7,44.4],["2022-04-12",-0.3,15.4,31.5,59.7],["2022-04-17",-0.5,14.0,31.1,57.2],["2022-11-18",-5.0,2.0,23.0,35.6],["2022-11-19",-6.2,1.9,20.8,35.4],["2022-11-20",-3.3,0.8,26.1,33.4],["2022-11-21",-3.4,0.8,25.9,33.4],["2022-11-22",-3.3,2.5,26.1,36.5],["2022-11-23",-0.8,6.1,30.6,43.0],["2022-11-24",-2.5,4.3,27.5,39.7],["2022-11-30",-0.6,5.0,30.9,41.0],["2022-12-01",-0.9,0.7,30.4,33.3],["2022-12-02",-1.7,1.9,28.9,35.4],["2022-12-03",-2.0,-0.1,28.4,31.8],["2022-12-04",-0.5,2.1,31.1,35.8],["2022-12-07",-1.2,3.6,29.8,38.5],["2022-12-08",-1.6,3.1,29.1,37.6],["2022-12-09",-3.3,1.1,26.1,34.0],["2022-12-10",-4.7,-0.8,23.5,30.6],["2022-12-11",-4.2,-1.3,24.4,29.7],["2022-12-12",-3.6,0.1,25.5,32.2],["2022-12-13",-6.3,-1.3,20.7,29.7],["2022-12-14",-8.8,-2.2,16.2,28.0],["2022-12-15",-10.5,-2.1,13.1,28.2],["2022-12-16",-9.1,-1.8,15.6,28.8],["2022-12-17",-7.4,-2.0,18.7,28.4],["2022-12-18",-7.6,-2.5,18.3,27.5],["2022-12-19",-4.5,3.2,23.9,37.8],["2023-01-17",-2.7,4.2,27.1,39.6],["2023-01-18",-4.2,1.8,24.4,35.2],["2023-01-19",-3.9,2.0,25.0,35.6],["2023-01-20",-4.2,1.9,24.4,35.4],["2023-01-21",-1.7,3.1,28.9,37.6],["2023-01-23",-0.8,2.6,30.6,36.7],["2023-01-24",-3.1,2.1,26.4,35.8],["2023-01-25",0.0,1.7,32.0,35.1],["2023-01-26",-1.2,0.2,29.8,32.4],["2023-01-27",-2.9,3.1,26.8,37.6],["2023-01-28",-2.9,1.8,26.8,35.2],["2023-01-29",-1.4,2.5,29.5,36.5],["2023-02-02",-1.9,5.8,28.6,42.4],["2023-02-04",-5.3,3.7,22.5,38.7],["2023-02-05",-5.8,1.3,21.6,34.3],["2023-02-06",-6.0,0.7,21.2,33.3],["2023-02-07",-7.9,1.1,17.8,34.0],["2023-02-08",-6.1,1.5,21.0,34.7],["2023-02-09",-4.9,2.9,23.2,37.2],["2023-02-10",-1.3,5.9,29.7,42.6],["2023-02-14",-0.6,7.0,30.9,44.6],["2023-02-15",-2.4,7.8,27.7,46.0],["2023-02-16",-1.1,10.1,30.0,50.2],["2023-02-25",-1.1,3.7,30.0,38.7],["2023-02-26",-3.2,3.0,26.2,37.4],["2023-02-27",-4.1,3.9,24.6,39.0],["2023-02-28",-4.0,4.7,24.8,40.5],["2023-03-01",-5.9,7.3,21.4,45.1],["2023-03-02",-3.7,5.4,25.3,41.7],["2023-03-03",-3.2,3.9,26.2,39.0],["2023-03-04",-1.1,6.1,30.0,43.0],["2023-03-05",-1.1,3.9,30.0,39.0],["2023-03-06",-2.5,3.7,27.5,38.7],["2023-03-07",-2.4,4.8,27.7,40.6],["2023-03-08",-2.1,3.6,28.2,38.5],["2023-03-11",-0.5,3.4,31.1,38.1],["2023-03-12",-2.3,6.2,27.9,43.2],["2023-03-15",-0.7,6.5,30.7,43.7],["2023-03-16",-2.2,8.6,28.0,47.5],["2023-03-28",-0.8,7.0,30.6,44.6],["2023-04-02",0.0,7.8,32.0,46.0],["2023-04-03",-1.4,3.8,29.5,38.8],["2023-04-04",-3.6,5.8,25.5,42.4],["2023-04-05",-2.8,7.3,27.0,45.1],["2023-04-06",-3.0,9.8,26.6,49.6],["2023-04-07",-1.1,5.6,30.0,42.1],["2023-04-09",-0.1,12.4,31.8,54.3],["2023-04-12",-0.2,14.6,31.6,58.3],["2023-11-21",-0.7,8.1,30.7,46.6],["2023-11-22",-4.2,0.8,24.4,33.4],["2023-11-25",-0.9,3.0,30.4,37.4],["2023-11-26",-3.1,0.8,26.4,33.4],["2023-11-27",-2.6,1.6,27.3,34.9],["2023-11-28",-5.6,0.1,21.9,32.2],["2023-11-29",-5.6,0.8,21.9,33.4],["2023-11-30",-8.0,-1.1,17.6,30.0],["2023-12-01",-7.8,-2.9,18.0,26.8],["2023-12-02",-4.7,-1.8,23.5,28.8],["2023-12-03",-5.8,-0.9,21.6,30.4],["2023-12-04",-5.2,-0.8,22.6,30.6],["2023-12-05",-3.6,-0.4,25.5,31.3],["2023-12-06",-0.8,0.6,30.6,33.1],["2023-12-07",-1.0,1.1,30.2,34.0],["2023-12-08",-0.9,1.3,30.4,34.3],["2023-12-15",-0.4,5.8,31.3,42.4],["2024-01-04",-2.3,7.3,27.9,45.1],["2024-01-05",-0.7,0.9,30.7,33.6],["2024-01-06",-1.9,1.0,28.6,33.8],["2024-01-07",-7.8,-0.4,18.0,31.3],["2024-01-08",-9.2,-3.9,15.4,25.0],["2024-01-09",-10.6,-3.9,12.9,25.0],["2024-01-10",-9.0,-1.8,15.8,28.8],["2024-01-11",-7.3,-0.2,18.9,31.6],["2024-01-12",-1.7,0.6,28.9,33.1],["2024-01-15",-4.3,2.2,24.3,36.0],["2024-01-16",-3.7,1.1,25.3,34.0],["2024-01-17",-4.6,-0.2,23.7,31.6],["2024-01-18",-5.2,0.5,22.6,32.9],["2024-01-19",-5.2,1.8,22.6,35.2],["2024-01-20",-3.3,3.0,26.1,37.4],["2024-01-21",-4.9,3.0,23.2,37.4],["2024-01-28",-2.3,6.4,27.9,43.5],["2024-01-29",-0.2,8.3,31.6,46.9],["2024-02-07",-1.1,9.2,30.0,48.6],["2024-02-08",-2.6,4.8,27.3,40.6],["2024-02-26",-0.6,10.5,30.9,50.9],["2024-02-28",-0.5,5.3,31.1,41.5],["2024-02-29",-1.5,9.3,29.3,48.7],["2024-03-05",-0.9,7.1,30.4,44.8],["2024-03-06",-1.2,7.1,29.8,44.8],["2024-03-08",-1.8,7.6,28.8,45.7],["2024-03-09",-0.2,9.3,31.6,48.7],["2024-03-17",-0.5,8.2,31.1,46.8],["2024-03-18",-2.6,6.0,27.3,42.8],["2024-03-19",-2.6,8.6,27.3,47.5],["2024-04-21",-0.8,8.3,30.6,46.9],["2024-04-22",-1.5,6.2,29.3,43.2],["2024-04-23",-1.1,8.2,30.0,46.8],["2024-11-03",-0.1,10.0,31.8,50.0],["2024-11-10",-0.2,3.5,31.6,38.3],["2024-11-21",-1.2,3.1,29.8,37.6],["2024-11-22",-1.3,2.8,29.7,37.0],["2024-11-23",-1.0,4.6,30.2,40.3],["2024-11-30",0.0,4.7,32.0,40.5],["2024-12-01",-1.8,3.2,28.8,37.8],["2024-12-02",-0.7,5.7,30.7,42.3],["2024-12-13",-2.0,3.2,28.4,37.8],["2024-12-14",-2.3,3.0,27.9,37.4],["2024-12-28",-2.6,0.5,27.3,32.9],["2024-12-29",-2.7,1.7,27.1,35.1],["2025-01-03",-1.5,2.4,29.3,36.3],["2025-01-04",-2.7,0.8,27.1,33.4],["2025-01-05",-2.5,1.4,27.5,34.5],["2025-01-08",0.0,4.2,32.0,39.6],["2025-01-10",-0.6,1.1,30.9,34.0],["2025-01-11",-0.6,0.6,30.9,33.1],["2025-01-12",-3.3,1.2,26.1,34.2],["2025-01-13",-6.4,-0.5,20.5,31.1],["2025-01-14",-4.7,2.0,23.5,35.6],["2025-01-16",-0.1,2.8,31.8,37.0],["2025-01-17",-3.2,1.0,26.2,33.8],["2025-01-18",-3.6,0.0,25.5,32.0],["2025-01-19",-3.7,5.1,25.3,41.2],["2025-01-20",-2.4,5.0,27.7,41.0],["2025-01-21",-3.6,0.7,25.5,33.3],["2025-01-22",-3.8,3.9,25.2,39.0],["2025-01-23",-0.7,3.7,30.7,38.7],["2025-02-01",-0.6,3.8,30.9,38.8],["2025-02-02",-1.0,3.8,30.2,38.8],["2025-02-03",-1.9,3.5,28.6,38.3],["2025-02-04",-3.8,4.1,25.2,39.4],["2025-02-05",-2.6,3.7,27.3,38.7],["2025-02-07",-0.1,3.0,31.8,37.4],["2025-02-08",-0.6,5.4,30.9,41.7],["2025-02-09",-2.5,4.0,27.5,39.2],["2025-02-10",-2.0,3.3,28.4,37.9],["2025-02-11",-3.1,3.2,26.4,37.8],["2025-02-12",-5.0,2.0,23.0,35.6],["2025-02-13",-2.7,-0.2,27.1,31.6],["2025-02-14",-2.1,1.1,28.2,34.0],["2025-02-15",-5.8,-0.2,21.6,31.6],["2025-02-16",-8.1,-1.1,17.4,30.0],["2025-02-17",-12.1,-2.2,10.2,28.0],["2025-02-18",-11.9,-1.6,10.6,29.1],["2025-02-19",-13.3,0.2,8.1,32.4],["2025-02-20",-7.2,1.2,19.0,34.2],["2025-02-21",-2.3,5.3,27.9,41.5],["2025-02-24",-0.1,13.6,31.8,56.5],["2025-03-02",-0.1,7.2,31.8,45.0],["2025-03-16",-0.5,7.9,31.1,46.2],["2025-03-17",-2.2,5.9,28.0,42.6],["2025-03-18",-3.3,7.4,26.1,45.3],["2025-03-19",-3.2,11.3,26.2,52.3],["2025-03-20",-0.2,15.5,31.6,59.9],["2025-11-20",-1.1,3.3,30.0,37.9],["2025-11-21",-3.6,1.6,25.5,34.9],["2025-11-22",-5.4,1.7,22.3,35.1],["2025-11-23",-5.2,0.3,22.6,32.5],["2025-11-24",-3.8,2.8,25.2,37.0],["2025-11-25",-0.1,3.3,31.8,37.9],["2025-11-26",-1.0,4.6,30.2,40.3],["2025-11-27",-0.3,3.9,31.5,39.0],["2025-12-02",-0.8,4.2,30.6,39.6],["2025-12-03",-0.8,3.9,30.6,39.0],["2025-12-04",-0.4,4.1,31.3,39.4],["2025-12-06",-0.2,4.4,31.6,39.9],["2025-12-16",-0.3,5.1,31.5,41.2],["2025-12-17",-2.1,4.3,28.2,39.7],["2025-12-24",-6.6,0.7,20.1,33.3],["2025-12-25",-9.2,-4.3,15.4,24.3],["2025-12-26",-8.6,-0.7,16.5,30.7],["2025-12-27",-1.5,3.5,29.3,38.3],["2025-12-28",-2.2,1.8,28.0,35.2],["2025-12-29",-1.9,3.8,28.6,38.8],["2025-12-30",-2.2,2.3,28.0,36.1],["2025-12-31",-3.7,2.8,25.3,37.0],["2026-01-02",-0.8,2.5,30.6,36.5],["2026-01-03",-1.8,0.9,28.8,33.6],["2026-01-04",-5.2,-0.3,22.6,31.5],["2026-01-05",-6.7,-0.2,19.9,31.6],["2026-01-06",-8.8,-2.6,16.2,27.3],["2026-01-07",-8.9,-3.7,16.0,25.3],["2026-01-08",-11.2,-4.1,11.8,24.6],["2026-01-09",-9.5,-5.1,14.9,22.8],["2026-01-10",-7.8,-1.1,18.0,30.0],["2026-01-11",-10.2,-3.3,13.6,26.1],["2026-01-12",-12.9,-0.1,8.8,31.8],["2026-01-13",-2.3,2.8,27.9,37.0],["2026-01-14",-0.4,5.6,31.3,42.1],["2026-01-15",-0.5,5.6,31.1,42.1],["2026-01-16",-0.3,6.9,31.5,44.4],["2026-01-17",-0.3,3.0,31.5,37.4],["2026-01-18",-1.3,3.7,29.7,38.7],["2026-01-19",-2.6,4.3,27.3,39.7],["2026-01-20",-4.3,1.2,24.3,34.2],["2026-01-21",-6.5,0.9,20.3,33.6],["2026-01-22",-6.8,-0.9,19.8,30.4],["2026-01-23",-7.6,-4.3,18.3,24.3],["2026-01-24",-4.6,-2.0,23.7,28.4],["2026-01-25",-3.4,-1.2,25.9,29.8],["2026-01-26",-2.0,0.8,28.4,33.4],["2026-01-27",-2.0,0.9,28.4,33.6],["2026-01-28",-1.6,1.0,29.1,33.8],["2026-01-29",-3.8,-0.5,25.2,31.1],["2026-01-30",-4.0,-1.3,24.8,29.7],["2026-01-31",-6.4,-1.9,20.5,28.6],["2026-02-01",-8.1,-6.3,17.4,20.7],["2026-02-02",-10.0,-7.5,14.0,18.5],["2026-02-03",-8.9,-5.2,16.0,22.6],["2026-02-04",-7.5,-4.6,18.5,23.7],["2026-02-05",-5.8,-1.2,21.6,29.8],["2026-02-06",-1.3,1.8,29.7,35.2],["2026-02-08",-0.5,1.1,31.1,34.0],["2026-02-09",-0.7,1.6,30.7,34.9],["2026-02-10",-0.1,4.4,31.8,39.9],["2026-02-14",-1.9,1.1,28.6,34.0],["2026-02-15",-4.3,0.1,24.3,32.2],["2026-02-16",-5.0,-2.0,23.0,28.4],["2026-02-17",-4.1,-0.8,24.6,30.6],["2026-02-18",-6.3,-0.3,20.7,31.5],["2026-02-19",-7.8,0.2,18.0,32.4],["2026-02-20",-8.0,0.7,17.6,33.3],["2026-02-21",-0.8,8.4,30.6,47.1],["2026-03-05",-0.9,11.6,30.4,52.9],["2026-03-17",-0.1,10.4,31.8,50.7],["2026-03-27",-1.2,7.6,29.8,45.7],["2026-04-01",-0.8,11.2,30.6,52.2],["2026-04-08",-0.5,13.1,31.1,55.6],["2026-04-11",0.0,13.6,32.0,56.5],["2026-11-06",-0.3,5.4,31.5,41.7]],"units":"Fahrenheit primary, Celsius secondary. F = C*9/5+32, values rounded to 0.1."}</script>
+<script>
+/* Fixed data snapshot in /weather/data.json. To add a season: append it to freezing_seasons
+   (and its nights to freezing_days_daily), update dataset_as_of, then change REF and the two
+   labelled AVG ranges below. Only "today" and "next solstices" depend on the current date. */
+const REF='2025/26', AVG=[{n:5,from:'2021/22'},{n:10,from:'2016/17'}];
+const TZ='Europe/Berlin', LAT=52.52, LON=13.41;
+const $=id=>document.getElementById(id);
+const F=c=>Math.round((c*9/5+32)*10)/10;
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const dFmt=iso=>{const [y,m,d]=iso.split('-').map(Number);return d+' '+MON[m-1]+' '+y};
+const dShort=iso=>{const [y,m,d]=iso.split('-').map(Number);return d+' '+MON[m-1]};
+const card=(l,big,sub)=>`<div class="wx-card"><div class="lbl">${l}</div><div class="big">${big}</div><div class="sub">${sub||''}</div></div>`;
+const ms=iso=>Date.UTC(...iso.split('-').map((v,i)=>i==1?v-1:+v));
+const days=(a,b)=>Math.round((ms(b)-ms(a))/864e5);
+const seasonStart=s=>(+s.slice(0,4))+'-09-01';
+const hm=min=>{min=Math.round(min);return Math.floor(min/60)+'h '+String(min%60).padStart(2,'0')+'m'};
+const berlinParts=(t)=>{const p=Object.fromEntries(new Intl.DateTimeFormat('en-GB',{timeZone:TZ,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(t).map(x=>[x.type,x.value]));return p};
+const berlinDate=t=>{const p=berlinParts(t);return p.year+'-'+p.month+'-'+p.day};
+const berlinTime=t=>{const p=berlinParts(t);return p.hour.replace('24','00')+':'+p.minute};
+/* NOAA solar equations. iso = Berlin calendar date. Returns UTC ms for sunrise/sunset and daylight minutes. */
+function sun(iso){
+  const [y,m,d]=iso.split('-').map(Number), rad=Math.PI/180;
+  const jd=Date.UTC(y,m-1,d,12)/864e5+2440587.5, T=(jd-2451545)/36525;
+  const L0=(280.46646+T*(36000.76983+T*0.0003032))%360, M=357.52911+T*(35999.05029-0.0001537*T);
+  const e=0.016708634-T*(0.000042037+0.0000001267*T);
+  const C=Math.sin(M*rad)*(1.914602-T*(0.004817+0.000014*T))+Math.sin(2*M*rad)*(0.019993-0.000101*T)+Math.sin(3*M*rad)*0.000289;
+  const om=125.04-1934.136*T, lam=L0+C-0.00569-0.00478*Math.sin(om*rad);
+  const eps=23+(26+((21.448-T*(46.815+T*(0.00059-T*0.001813))))/60)/60+0.00256*Math.cos(om*rad);
+  const dec=Math.asin(Math.sin(eps*rad)*Math.sin(lam*rad));
+  const y2=Math.tan(eps*rad/2)**2;
+  const eq=4/rad*(y2*Math.sin(2*L0*rad)-2*e*Math.sin(M*rad)+4*e*y2*Math.sin(M*rad)*Math.cos(2*L0*rad)-0.5*y2*y2*Math.sin(4*L0*rad)-1.25*e*e*Math.sin(2*M*rad));
+  const ha=Math.acos(Math.cos(90.833*rad)/(Math.cos(LAT*rad)*Math.cos(dec))-Math.tan(LAT*rad)*Math.tan(dec))/rad;
+  const base=Date.UTC(y,m-1,d);
+  return {rise:base+(720-4*(LON+ha)-eq)*6e4, set:base+(720-4*(LON-ha)-eq)*6e4, dayMin:8*ha};
+}
+const addDay=(iso,n)=>new Date(ms(iso)+n*864e5).toISOString().slice(0,10);
+Promise.resolve(JSON.parse(document.getElementById('wx-data').textContent)).then(D=>{
+  $('asof').textContent='Weather data as of '+dFmt(D.dataset_as_of)+'. Fixed snapshot, it does not update by itself.';
+  const S=D.freezing_seasons, ref=S.find(s=>s.season===REF);
+  /* last winter */
+  $('ref-title').textContent='Winter '+REF;
+  $('ref-cards').innerHTML=
+    card('First freezing night',dShort(ref.first),ref.first.slice(0,4))+
+    card('Last freezing night',dShort(ref.last),ref.last.slice(0,4))+
+    card('Freezing nights',ref.freezing_days,ref.all_day_freeze_days+' stayed below 32&nbsp;&deg;F all day')+
+    card('Longest unbroken run',ref.longest_run_days+' <small>days</small>',dShort(ref.longest_run_start)+' to '+dShort(ref.longest_run_end))+
+    card('Coldest night',ref.coldest_f.toFixed(1)+'&nbsp;&deg;F',ref.coldest_c.toFixed(1)+'&nbsp;&deg;C');
+  /* chart */
+  const st=seasonStart(REF), n=365, rows=D.freezing_days_daily.filter(r=>r[0]>=st&&r[0]<addDay(st,n));
+  const W=900,H=260,pl=44,pr=12,pt=14,pb=30, lo=Math.floor(Math.min(...rows.map(r=>r[3]))/10)*10-0, hi=40;
+  const x=iso=>pl+(days(st,iso)/n)*(W-pl-pr), yv=v=>pt+(hi-v)/(hi-lo)*(H-pt-pb);
+  let g='';
+  for(let v=lo;v<=hi;v+=10)g+=`<line x1="${pl}" x2="${W-pr}" y1="${yv(v)}" y2="${yv(v)}" stroke="#E6DDCC"/><text x="${pl-6}" y="${yv(v)+4}" text-anchor="end" font-size="16" fill="#7A7366">${v}&deg;</text>`;
+  g+=`<line x1="${pl}" x2="${W-pr}" y1="${yv(32)}" y2="${yv(32)}" stroke="#0A66C2" stroke-dasharray="4 4"/>`;
+  ['09-01','10-01','11-01','12-01','01-01','02-01','03-01','04-01','05-01'].forEach(md=>{const yr=+REF.slice(0,4)+(+md.slice(0,2)<9?1:0);const iso=yr+'-'+md;g+=`<text x="${x(iso)}" y="${H-10}" font-size="16" fill="#7A7366">${MON[+md.slice(0,2)-1]}</text>`});
+  rows.forEach(r=>{g+=`<line x1="${x(r[0])}" x2="${x(r[0])}" y1="${yv(32)}" y2="${yv(r[3])}" stroke="#0A66C2" stroke-width="2.4" stroke-linecap="round"><title>${dFmt(r[0])}: ${r[3]}&deg;F (${r[1]}&deg;C)</title></line>`});
+  $('chart').innerHTML=g;
+  /* averages */
+  const hist=S; // complete seasons only
+  const dayOf=(s,iso)=>days(seasonStart(s.season),iso);
+  const dateOfDay=k=>{const t=new Date(Date.UTC(2001,8,1)+Math.round(k)*864e5);return t.getUTCDate()+' '+MON[t.getUTCMonth()]};
+  let ac='';
+  AVG.forEach(a=>{
+    const set=hist.filter(s=>s.season>=a.from&&s.season<=REF);
+    const mf=set.reduce((t,s)=>t+dayOf(s,s.first),0)/set.length, ml=set.reduce((t,s)=>t+dayOf(s,s.last),0)/set.length;
+    const nights=set.reduce((t,s)=>t+s.freezing_days,0)/set.length;
+    ac+=card(a.n+' seasons, '+a.from+' to '+REF,dateOfDay(mf)+' <small>to</small> '+dateOfDay(ml),'first and last freezing night, about '+Math.round(nights)+' freezing nights a season');
+  });
+  $('avg-cards').innerHTML=ac;
+  $('season-table').innerHTML='<tr><th>Season</th><th>First</th><th>Last</th><th class="n">Freezing</th><th class="n">Run</th><th class="n">Low</th></tr>'+
+    hist.slice().reverse().map(s=>`<tr><td>${s.season}</td><td>${dShort(s.first)} ${s.first.slice(2,4)}</td><td>${dShort(s.last)} ${s.last.slice(2,4)}</td><td class="n">${s.freezing_days}</td><td class="n">${s.longest_run_days}d</td><td class="n">${s.coldest_f.toFixed(0)}&deg;F</td></tr>`).join('');
+  /* today */
+  const now=new Date(), td=berlinDate(now), a=sun(td), b=sun(addDay(td,-1));
+  const diff=Math.round(a.dayMin-b.dayMin), sg=diff>0?'+':diff<0?'\u2212':'';
+  $('today-note').textContent='Calculated in your browser for '+dFmt(td)+', shown in Berlin time.';
+  $('today-cards').innerHTML=card('Sunrise',berlinTime(a.rise),'calculated')+card('Sunset',berlinTime(a.set),'calculated')+card('Daylight',hm(a.dayMin),'calculated')+card('Vs yesterday',sg+Math.abs(diff)+' <small>min</small>',diff>0?'days are getting longer':diff<0?'days are getting shorter':'no change');
+  /* next solstices */
+  const nxt=k=>D.solstices.find(s=>s.kind===k&&Date.parse(s.utc)>now.getTime());
+  $('sol-cards').innerHTML=['winter','summer'].map(k=>{
+    const s=nxt(k); if(!s)return card(k==='winter'?'Shortest day':'Longest day','n/a','data ends 2035');
+    const dd=days(td,s.berlin_date), dm=s.daylight?null:sun(s.berlin_date).dayMin;
+    return card((k==='winter'?'Next shortest day':'Next longest day'),dFmt(s.berlin_date),
+      'Solstice at '+s.berlin_local.slice(11)+' Berlin time, '+(dd===0?'today':dd+' days to go')+'. Daylight '+(s.daylight||hm(dm))+(s.daylight?'':' (calculated)')+'.');
+  }).join('');
+}).catch(()=>{$('asof').textContent='Could not load the weather data.'});
+</script>
+</body>
+</html>
