@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
+:root {
+  --text: #272727;
+  --muted: #3d3d3d;
+  --accent: #0095B6;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--text);
+  font-family: "Inconsolata", monospace;
+  font-size: 16px;
+  line-height: 1.55;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+h2:after {
+  content: " ";
+  display: block;
+  border: 1px solid black;
+  margin-top: 2px;
+}
+
+h3 {
+  text-decoration: underline;
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+}
+
+ul {
+  padding: 0 0 0 15px;
+}
+
+ul li {
+  margin-bottom: 0.35rem;
+}
+
+/* Navbar */
+
+.navbar {
+  padding: 50px 0 0 0;
+}
+
+#banner {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px 4px 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+#author-name {
+  font-size: 30px;
+  color: var(--text);
+  display: inline-block;
+  font-weight: 400;
+}
+
+#author-name:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+#headline {
+  clear: both;
+  margin: 0;
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+#work-auth {
+  margin: 6px 0 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+}
+
+.navbar-ul {
+  display: block;
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+}
+
+.nav-list {
+  display: inline-block;
+  margin: 0 14px 0 0;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.name-icons {
+  margin-left: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-icons a {
+  display: inline-flex;
+}
+
+.name-icons .nav-icon {
+  vertical-align: baseline;
+}
+
+.name-icons .github-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-row .github-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: -2px;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+@media (max-width: 800px) {
+  .container {
+    max-width: 600px;
+    transition: 0.3s ease all;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    max-width: 83%;
+  }
+
+  .navbar-ul {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    text-align: left;
+    padding: 50px 0 0 0;
+  }
+
+  #banner {
+    margin: 0 10px 4px 0;
+  }
+
+  #author-name {
+    width: 100%;
+    float: none;
+  }
+
+  #navlist {
+    padding: 0;
+    margin: 10px 0 0 0;
+  }
+
+  #navlist li {
+    display: inline-block;
+    float: none;
+    margin: 0;
+  }
+}
+
+.bottom-space {
+  height: 140px;
+}
+
+a.plain-link {
+  color: inherit;
+}
+
+a.plain-link:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+
+h3 a.plain-link,
+h3 a.plain-link:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 3.5rem;
+}
+
+h2:first-of-type {
+  margin-top: 1.875rem;
+}
+
+.location {
+  font-style: italic;
+  color: #6a6a6a;
+  margin: 0 0 0.25rem 0;
+}
+
+.location + ul {
+  margin-top: 0.1rem;
+}
+
+h3 {
+  margin-top: 2.4rem;
+}
+
+.location {
+  margin-top: -0.35rem;
+}
+
+.location + ul {
+  margin-top: 0.1rem;
+}
+
+h2 {
+  color: #444746;
+}
+
+h2:after {
+  border-color: #444746;
+}
+
+#projects ul ul {
+  list-style: circle;
+  margin: 0.25rem 0 0.25rem 10px;
+}
+
+#projects ul ul li {
+  margin-bottom: 0.25rem;
+}
+
+.content p,
+.content ul {
+  max-width: 65ch;
+  width: 100%;
+}
+
+.content h2,
+.content h3,
+.content hr {
+  max-width: 100%;
+}
+
+/* Summary spans the full content width (approved 2026-11-13). */
+#summary + ul {
+  max-width: none;
+}
+
+/* Tighter gap between Education entries (approved 2026-11-13). */
+#education ~ h3 {
+  margin-top: 1.6rem;
+}
+
+.font-controls button {
+  font: inherit;
+  font-weight: 700;
+  color: var(--accent);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 6px;
+  margin: 0 2px;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+.font-controls button:hover {
+  background: #f0f7fa;
+}
+
+.projects-table li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 0.25rem 2rem;
+  margin-bottom: 0.9rem;
+  list-style: none;
+}
+
+.projects-table .project-name {
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .projects-table li {
+    grid-template-columns: 1fr;
+  }
+}
+
+.font-controls-row {
+  max-width: 700px;
+  margin: -30px auto 0 auto;
+  text-align: right;
+  padding: 0 1rem;
+}
+
+.font-controls {
+  display: inline-block;
+}
+
+.skills-table li {
+  display: grid;
+  grid-template-columns: 184px 1fr;
+  gap: 0.25rem 3rem;
+  margin-bottom: 0.9rem;
+  list-style: none;
+}
+
+.skills-table .skill-name {
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .skills-table li {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content h3,
+.content h3 a {
+  color: #0A66C2;
+}
+
+.content h3 a:hover {
+  color: #0A66C2;
+}
+
+.projects-table .project-name {
+  color: #0A66C2;
+}
+
+.skills-table .skill-name {
+  color: #444746;
+}
+
+#author-name {
+  color: #0A66C2;
+}
+
+.ats-note {
+  max-width: 700px;
+  margin: 4px auto 0 auto;
+  padding: 0 1rem;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+/* 42 Berlin heading link: black like body text, underline only on hover.
+   inline-block keeps the h3's own underline from painting beneath the link. */
+.content h3 a.plain-link[href="https://www.42berlin.de"] {
+  display: inline-block;
+}
+.content h3 a.plain-link[href="https://www.42berlin.de"],
+.content h3 a.plain-link[href="https://www.42berlin.de"]:hover {
+  color: #0A66C2;
+}
