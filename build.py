@@ -243,7 +243,7 @@ human = f'''<!DOCTYPE html>
     <meta name="description" content="personal website" />
     <meta name="author" content="Noah Robinson" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <link rel="stylesheet" href="./css/style.css?v=20261115-1" />
+    <link rel="stylesheet" href="./css/style.css?v=20261113-3" />
   </head>
   <body>
     <div class="wrapper">
@@ -256,7 +256,6 @@ human = f'''<!DOCTYPE html>
           </span>
         </span>
         <p id="headline">{data['headline']}</p>
-        <p id="work-auth">{data['work_auth']}</p>
       </div>
       <hr />
 
@@ -361,7 +360,7 @@ ats = f'''<!DOCTYPE html>
   <body>
     <h1>Noah Robinson</h1>
     <p class="headline">{plain(data['headline'])}</p>
-    <p class="contact">Berlin | {plain(data['work_auth'])} | linkedin.com/in/noahrobinson | github.com/noah-42 | noah42.com | <a href="../">formatted version</a></p>
+    <p class="contact">Berlin | linkedin.com/in/noahrobinson | github.com/noah-42 | noah42.com | <a href="../">formatted version</a></p>
 
     <h2>Summary</h2>
     <ul>
