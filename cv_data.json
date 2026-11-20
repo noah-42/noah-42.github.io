@@ -12,6 +12,11 @@
       "url": "https://www.noah42.com/jobscout/"
     },
     {
+      "name": "Tomorrow",
+      "desc": "A job listings search engine built on Jobscout database",
+      "url": "https://tomorrow.onl"
+    },
+    {
       "name": "Modelizer",
       "desc": "Track LLM usage in real time across Claude, Codex, Grok, and other coding subscriptions",
       "desc_links": {
