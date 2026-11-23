@@ -316,5 +316,122 @@
         "url": "https://noah42.com"
       }
     ]
+  },
+  "site": {
+    "name": "Noah Robinson",
+    "description": "personal website",
+    "head": [
+      "<link rel=\"icon\" type=\"image/svg+xml\" href=\"./assets/sun-disc-favicon.svg?v=sun1\" />",
+      "<link rel=\"icon\" type=\"image/png\" href=\"./assets/sun-disc-180.png?v=sun1\" />",
+      "<link rel=\"apple-touch-icon\" href=\"./assets/sun-disc-180.png?v=sun1\" />",
+      "<link rel=\"stylesheet\" href=\"./css/style.css?v=20261113-3\" />"
+    ],
+    "nav": [
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/noahrobinson",
+        "icon": "https://www.linkedin.com/favicon.ico"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/noah-42",
+        "icon": "github"
+      }
+    ],
+    "sections": {
+      "projects": "Coding Projects (Beta)"
+    },
+    "autolink": {
+      "summary": [
+        {
+          "find": "42 Berlin",
+          "replace": "<a class=\"plain-link summary-link\" href=\"https://www.42berlin.de\" target=\"_blank\" rel=\"noopener\">42 Berlin</a>",
+          "when_startswith": "Software engineering student at 42 Berlin who, on the side, is actively building with AI"
+        }
+      ],
+      "bullet_replacements": [
+        {
+          "find": "Inc. Magazine",
+          "replace": "<a class=\"plain-link\" href=\"https://www.inc.com\" target=\"_blank\" rel=\"noopener\">Inc. Magazine</a>"
+        },
+        {
+          "find": "11th fastest growing private company in the USA",
+          "replace": "<a class=\"plain-link\" href=\"https://www.forbes.com/sites/mnewlands/2015/11/11/this-ceo-bootstrapped-his-mobile-ad-company-to-400-billion-impressions-a-month-heres-how/\" target=\"_blank\" rel=\"noopener\">11th fastest growing private company in the USA</a>"
+        }
+      ],
+      "bullet_links": {
+        "AOL": "https://aol.com",
+        "AstraZeneca": "https://www.astrazeneca.com/",
+        "Blockbuster": "https://www.blockbuster.com/",
+        "Discover": "https://www.discover.com",
+        "Electronic Arts": "https://www.ea.com",
+        "eBay": "https://www.ebay.com",
+        "GlaxoSmithKline": "https://gsk.com",
+        "Merck": "https://www.merckgroup.com/",
+        "Netflix": "https://www.netflix.com",
+        "Novartis": "https://novartis.com",
+        "O Negative": "https://www.linkedin.com/company/o-negative-media-llc",
+        "Oracle": "https://www.oracle.com",
+        "Pfizer": "https://pfizer.com",
+        "Sanofi": "https://sanofi.com",
+        "Starbucks": "https://starbucks.com",
+        "Universal Music": "https://universalmusic.com",
+        "Verizon Wireless": "https://www.verizon.com/",
+        "Warner Music": "https://www.wmg.com"
+      },
+      "skill_links": {
+        "Claude Code": "https://claude.com/product/claude-code",
+        "Codex": "https://chatgpt.com/codex",
+        "Cursor": "https://cursor.com",
+        "Google Workspace": "https://workspace.google.com/",
+        "Jira": "https://www.atlassian.com/software/jira",
+        "Microsoft Office": "https://www.microsoft.com/en/microsoft-365/microsoft-office",
+        "Miro": "https://miro.com/",
+        "Slack": "https://slack.com/",
+        "Trello": "https://trello.com/",
+        "UV": "https://docs.astral.sh/uv/",
+        "VS Code": "https://code.visualstudio.com/",
+        "Vim": "https://www.vim.org/",
+        "Zed": "https://zed.dev/",
+        "Grok Bot": "https://x.ai/bot",
+        "Instinct": "https://www.instinct.com",
+        "OmO": "https://omo.dev/",
+        "OpenCode": "https://opencode.ai/",
+        "Pi": "https://pi.dev/",
+        "Python": "https://www.python.org/",
+        "C": "https://www.c-language.org/",
+        "git": "https://git-scm.com/"
+      },
+      "skill_links_partial": {
+        "Linux": "https://www.linux.org/"
+      }
+    },
+    "contact": {
+      "urls": {
+        "linkedin.com/in/noahrobinson": "https://linkedin.com/in/noahrobinson",
+        "github.com/noah-42": "https://github.com/noah-42",
+        "noah42.com": "https://noah42.com"
+      },
+      "icons": {
+        "LinkedIn": "https://www.linkedin.com/favicon.ico",
+        "GitHub": "github"
+      }
+    },
+    "ats": {
+      "sections": {
+        "projects": "AI Projects (Beta)"
+      },
+      "contact_line": [
+        "Berlin",
+        "linkedin.com/in/noahrobinson",
+        "github.com/noah-42",
+        "noah42.com"
+      ],
+      "contact_list": [
+        "LinkedIn: linkedin.com/in/noahrobinson",
+        "GitHub: github.com/noah-42",
+        "Web: noah42.com"
+      ]
+    }
   }
 }
