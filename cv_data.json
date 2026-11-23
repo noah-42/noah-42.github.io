@@ -433,6 +433,12 @@
         "Web: noah42.com"
       ]
     },
-    "pdf": true
+    "pdf": true,
+    "print": {
+      "font": "mono",
+      "start_pt": 10.5,
+      "min_pt": 10,
+      "max_pages": 2
+    }
   }
 }
